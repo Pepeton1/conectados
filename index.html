@@ -270,7 +270,78 @@
         // y se actualiza la función showScreen para manejar la visibilidad de estos botones.
 
         const MAX_QUESTION_SWAPS = 3;
-		const csvData = `{{fetched_content_1}}`;
+	let allQuestions = []; // Se llenará después de cargar el CSV
+        let gameConfig = {}; 
+        let couplesData = []; 
+        let playerQuestionnaires = {};
+        let currentScreen = 'setup-screen'; 
+        let currentPlayerAnsweringQuizId = null;
+        let gameCurrentCoupleIndex = 0; 
+        let gameCurrentPlayerIndexInCouple = 0; 
+        let gameQuestionRound = 0;
+        let gameTimerInterval; 
+        let gameTimeRemaining; 
+        let currentQuestionForGame;
+        let countdownSound, timesupSound; 
+        let modalActionCallback = null;
+        let currentQuestionnaireQuestionIndex = 0;
+
+        // ... (tus referencias a elementos DOM permanecen igual)
+        const screens = { setup: document.getElementById('setup-screen'), /* ... */ };
+        // ... etc.
+
+        // La función parseCSV permanece igual
+        function parseCSV(data) { 
+            // ... tu función parseCSV sin cambios ...
+            // PERO asegúrate que maneje bien una cadena vacía si el fetch falla
+            if (!data || data.trim() === '') { // Añadir esta verificación al inicio de parseCSV
+                console.error("Error en parseCSV: No se proporcionaron datos CSV o están vacíos.");
+                return [];
+            }
+            // ... resto de parseCSV
+            if (data.trim() === '{{fetched_content_1}}') { // Esta condición ya no debería alcanzarse si usamos fetch
+                console.error("Error en parseCSV: Placeholder {{fetched_content_1}} encontrado. El CSV no se cargó correctamente.");
+                return [];
+            }
+            let lines = data.trim().split(/\r\n|\n|\r/);
+            // ... el resto de tu lógica de parseCSV
+        }
+
+
+        // ... (tus otras funciones JavaScript permanecen igual) ...
+
+
+        // MODIFICADO: window.onload para cargar el CSV con fetch
+        window.onload = async () => { // Convertir a función asíncrona
+            try {
+                const response = await fetch('preguntas.csv'); // Carga el archivo
+                if (!response.ok) {
+                    throw new Error(`Error al cargar preguntas.csv: ${response.status} ${response.statusText}`);
+                }
+                const csvText = await response.text(); // Obtiene el texto del archivo
+                allQuestions = parseCSV(csvText); // Parsea el texto obtenido
+
+                countdownSound = document.getElementById('countdown-sound');
+                timesupSound = document.getElementById('timesup-sound');
+
+                if (!allQuestions || allQuestions.length === 0) {
+                    showModal("Error Crítico", "No se pudieron cargar o procesar las preguntas del archivo CSV. Verifica que 'preguntas.csv' exista, esté en el formato correcto y no esté vacío.");
+                    startSetupButton.disabled = true;
+                    startSetupButton.classList.replace('btn-primary','btn-secondary');
+                    return;
+                }
+                numQuestionsInput.placeholder = `(Máx. ${allQuestions.length} si no se repiten)`;
+            } catch (error) {
+                console.error("Error crítico durante la carga o parseo del CSV (onload):", error);
+                showModal("Error Crítico", "Ocurrió un error al cargar las preguntas: " + error.message + ". Asegúrate de que el archivo 'preguntas.csv' esté en el mismo directorio que este HTML y sea accesible.");
+                startSetupButton.disabled = true;
+                startSetupButton.classList.replace('btn-primary','btn-secondary');
+            }
+            showScreen('setup');
+        };
+    </script>
+</body>
+</html>
         
         // ... (Resto del JavaScript igual a la versión 2.1.6, incluyendo la definición de las variables globales
         // y las funciones parseCSV, showModal, shuffleArray, resetGame, etc., hasta handleGameAnswer y endGame)
