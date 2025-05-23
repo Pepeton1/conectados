@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectados</title>
+	<link rel="manifest" href="./manifest.json">
+	<script>
+	if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('/sw.js');
+	}
+	</script>
+    <!-- NUEVO: Favicon -->
+    <link rel="icon" type="image/png" href="images/logo-conectados.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html, body { height: 100%; margin: 0; overflow: hidden; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #6579c2, #a777e3); color: #1e293b; display: flex; flex-direction: column; }
+        .main-title { font-size: 2.2rem; font-weight: 800; text-align: center; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); padding: 1rem 0.5rem; flex-shrink: 0; }
+        
+        .app-wrapper { display: flex; flex-direction: column; height: 100%; width: 100%; position: relative; }
+
+        .app-content-area { flex-grow: 1; display: flex; justify-content: center; align-items: center; padding: 0 15px 15px 15px; overflow: hidden; width: 100%; box-sizing: border-box; min-height: 0; }
+        .container { max-width: 800px; width: 100%; height: 100%; display: flex; flex-direction: column; }
+        
+        .global-actions-container { position: absolute; top: 10px; right: 15px; z-index: 1050; display: flex; gap: 0.5rem; }
+        .global-action-button { background-color: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.5rem; border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 0.2s; }
+        .global-action-button:hover { background-color: rgba(255,255,255,0.4); }
+        .global-action-button svg { width: 20px; height: 20px; fill: currentColor; }
+
+
+        .screen { background-color: rgba(255, 255, 255, 0.95); padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15), 0 5px 10px -5px rgba(0, 0, 0, 0.08); width: 100%; flex-grow: 1; display: flex; flex-direction: column; overflow-y: auto; position: relative; }
+        .screen.hidden { display: none !important; }
+        .screen-center-content { justify-content: center; }
+        .screen-main-content-top { justify-content: flex-start; }
+        .screen-main-content-top .screen-content-wrapper { flex-grow: 1; overflow-y: auto; margin-bottom: 1rem; min-height: 0; }
+        .screen-main-content-top .screen-actions-bottom { flex-shrink: 0; margin-top: auto; }
+
+        .btn { padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease; cursor: pointer; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 6px 10px rgba(0,0,0,0.15); }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .btn-primary { background-color: #3b82f6; color: white; } .btn-primary:hover:not(:disabled) { background-color: #2563eb; }
+        .btn-secondary { background-color: #6b7280; color: white; } .btn-secondary:hover:not(:disabled) { background-color: #4b5563; }
+        .btn-danger { background-color: #ef4444; color: white; } .btn-danger:hover:not(:disabled) { background-color: #dc2626; }
+        .btn-success { background-color: #22c55e; color: white; } .btn-success:hover:not(:disabled) { background-color: #16a34a; }
+        .btn-swap { background-color: #f59e0b; color: white; padding: 0.4rem 0.8rem; font-size: 0.8rem; } .btn-swap:hover:not(:disabled) { background-color: #d97706; }
+        .input-field { width: 100%; padding: 0.6rem 0.85rem; border: 1px solid #d1d5db; border-radius: 0.375rem; margin-top: 0.25rem; margin-bottom: 1rem; box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.05); }
+        .label-text { font-weight: 600; color: #374151; margin-bottom: 0.25rem; display: block; }
+        
+        .question-card-single { background-color: #f9fafb; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem; border: 1px solid #e5e7eb; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        .question-card-single p { font-size: 1.2rem; margin-bottom: 1rem; }
+        .question-progress-indicator { text-align: center; font-size: 0.9rem; color: #4b5563; margin-bottom: 0.5rem; flex-shrink: 0; }
+        #swaps-remaining-display { margin-bottom: 0.5rem !important; }
+
+        .timer-display { font-size: 2.5rem; font-weight: bold; text-align: center; margin: 0.5rem 0; padding: 0.5rem; border-radius: 0.375rem; }
+        .timer-blue { color: #3b82f6; } .timer-yellow { color: #f59e0b; } .timer-red { color: #ef4444; }
+        
+        #game-question-text { font-size: 1.5rem; margin-bottom: 1rem; color: #1e293b; line-height: 1.4; flex-grow:1; display:flex; align-items:center; justify-content:center;}
+        #partner-answer-reveal { font-size: 1.3rem; margin-top: 0.5rem; padding: 0.8rem; background-color: #e0e7ff; border-radius: 0.5rem; border: 1px dashed #a5b4fc; min-height: 40px; }
+        
+        #current-player-answering-game-large { font-size: 2rem; font-weight: 700; color: #4f46e5; margin-bottom: 0.15rem; }
+        #partner-to-guess-game-prompt { font-size: 1rem; color: #5e5e5e; }
+        .modal-title-large { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .player-choice-button-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; margin-top: 1rem; }
+        
+        #potential-points-display { position: absolute; top: 0.8rem; left: 1rem; background-color: rgba(96, 165, 250, 0.7); color: white; padding: 0.4rem 0.8rem; border-radius: 0.375rem; font-weight: bold; font-size: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 10; }
+        
+        #modal-image { max-width: 90px; max-height: 90px; margin: 0 auto 0.8rem auto; display: block; }
+        #modal-scores-summary { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #e5e7eb; text-align: left; font-size: 0.85rem; max-height: 150px; overflow-y: auto; }
+        #modal-scores-summary h4 { font-weight: 600; margin-bottom: 0.25rem; text-align: center; }
+        #modal-scores-summary p { margin-bottom: 0.15rem; }
+
+        #game-screen > .flex { min-height: 0; }
+
+        #instructions-modal-content { text-align: left; max-height: 70vh; overflow-y: auto; }
+        #instructions-modal-content h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; color: #3b82f6; }
+        #instructions-modal-content p { margin-bottom: 0.5rem; line-height: 1.6; }
+        #instructions-modal-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 0.75rem; }
+        #instructions-modal-content li { margin-bottom: 0.25rem; }
+
+        .screen-logo { /* NUEVO: Estilo común para logos en pantallas */
+            max-width: 100px; /* Ajusta según sea necesario */
+            max-height: 100px;
+            margin: 0 auto 1rem auto; /* Centrado y con margen inferior */
+        }
+
+
+        @media screen and (min-width: 1500px) {
+            body { font-size: 1.1rem; }
+            .main-title { font-size: 3rem; padding: 1.5rem 0; }
+            .global-actions-container { top: 20px; right: 25px; gap: 0.75rem; }
+            .global-action-button { width: 42px; height: 42px; }
+            .global-action-button svg { width: 22px; height: 22px; }
+            .screen-logo { max-width: 120px; max-height: 120px; margin-bottom: 1.5rem;}
+
+
+            .app-content-area { padding: 0 25px 25px 25px; }
+            .container { max-width: 1000px; }
+            .screen { padding: 2rem; }
+             .screen h2 { font-size: 2rem; margin-bottom: 1.2rem; }
+            .label-text, .input-field, .btn { font-size: 1.05rem; }
+            .input-field { padding: 0.7rem 1rem; }
+            .btn { padding: 0.9rem 1.8rem; }
+            .btn-swap { padding: 0.5rem 1rem; font-size: 0.9rem; }
+            #questionnaire-title { font-size: 1.8rem; }
+            .question-card-single p { font-size: 1.4rem; }
+            .question-card-single .input-field { font-size: 1.1rem; }
+            #game-screen .text-xl { font-size: 1.4rem; }
+            #current-couple-playing { font-size: 1.5rem; }
+            #current-player-answering-game-large { font-size: 2.8rem; }
+            #partner-to-guess-game-prompt { font-size: 1.2rem; }
+            #game-question-text { font-size: 2rem; }
+            #timer-display { font-size: 3.2rem; }
+            #potential-points-display { font-size: 1.2rem; padding: 0.6rem 1.1rem; }
+            #partner-answer-reveal { font-size: 1.6rem; }
+            #message-modal .modal-title-large, #instructions-modal .modal-title-large { font-size: 2rem; }
+            #message-modal #modal-message, #instructions-modal-content { font-size: 1.1rem; }
+            #modal-image { max-width: 120px; max-height: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-wrapper">
+        <h1 class="main-title">Conectados</h1>
+        
+        <div class="global-actions-container">
+            <button id="home-button-global" class="global-action-button" title="Volver al Inicio">
+                <svg viewBox="0 0 24 24"><path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>
+            </button>
+            <button id="instructions-button-global" class="global-action-button" title="Instrucciones del Juego">
+                <svg viewBox="0 0 24 24"><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
+            </button>
+            <button id="restart-game-button-global" class="global-action-button" title="Reiniciar el juego">
+                <svg viewBox="0 0 24 24"><path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" /></svg>
+            </button>
+        </div>
+
+        <div class="app-content-area">
+            <div class="container">
+                <div id="setup-screen" class="screen screen-center-content">
+                    <!-- NUEVO: Logo en Setup Screen -->
+                    <img src="images/logo-conectados.png" alt="Logo Conectados" class="screen-logo">
+                    <h2 class="text-2xl font-semibold mb-4 text-center">Preparacion del Juego</h2>
+                    <div class="mb-3"><label for="num-couples" class="label-text">Cuantas parejas juegan? (min. 1 - max. 10):</label><input type="number" id="num-couples" class="input-field" min="1" max="10" value="1"></div>
+                    <div class="mb-3"><label for="num-questions" class="label-text">Cuantos turnos por jugador? (mín. 1):</label><input type="number" id="num-questions" class="input-field" min="1" value="3"></div>
+                    <div class="mb-4"><label for="time-limit" class="label-text">Tiempo para Adivinar (segundos, mín. 10):</label><input type="number" id="time-limit" class="input-field" min="10" value="15"></div>
+                    <button id="start-setup-button" class="btn btn-primary w-full mt-2">Siguiente</button>
+                </div>
+
+                <div id="team-names-screen" class="screen screen-main-content-top hidden">
+                    <h2 class="text-2xl font-semibold mb-4 text-center">Identificación de las Parejas</h2>
+                    <div class="screen-content-wrapper">
+                        <div id="team-names-inputs" class="space-y-3"></div>
+                    </div>
+                    <div class="screen-actions-bottom">
+                        <button id="to-player-choice-button" class="btn btn-primary w-full">Siguiente</button>
+                    </div>
+                </div>
+
+                <div id="player-choice-screen" class="screen screen-main-content-top hidden">
+                    <h2 class="text-2xl font-semibold mb-2 text-center">Cuestionarios</h2>
+                    <p class="text-center text-gray-600 mb-3">Cada jugador debe completar su cuestionario en secreto.</p>
+                    <div class="screen-content-wrapper">
+                        <div id="player-choice-buttons-container" class="player-choice-button-grid"></div>
+                    </div>
+                    <div id="all-questionnaires-completed-message-choice" class="text-center my-3 hidden"><p class="text-green-600 font-semibold text-lg">¡Todos los cuestionarios completados!</p></div>
+                    <div class="screen-actions-bottom">
+                        <button id="start-game-from-choice-button" class="btn btn-success w-full hidden">¡Iniciar el Juego!</button>
+                    </div>
+                </div>
+
+                <div id="questionnaire-screen" class="screen hidden">
+                    <h2 id="questionnaire-title" class="text-xl font-semibold mb-1 text-center">Cuestionario</h2>
+                    <p id="questionnaire-instructions" class="text-center text-sm text-gray-600 mb-1"></p>
+                    <p id="swaps-remaining-display" class="text-center text-xs text-amber-700 font-semibold"></p>
+                    <div id="questionnaire-player-info" class="text-center font-semibold text-lg mb-2"></div>
+                    <div id="single-question-container" class="question-card-single"></div>
+                    <div id="question-progress-indicator" class="question-progress-indicator"></div>
+                    <div class="flex justify-between items-center mt-auto pt-2">
+                        <button id="prev-question-button" class="btn btn-secondary hidden">Anterior</button>
+                        <button id="next-question-button-quest" class="btn btn-primary">Siguiente Pregunta</button>
+                    </div>
+                </div>
+                
+                <div id="game-screen" class="screen hidden">
+                    <div id="potential-points-display" class="hidden"></div>
+                    <div class="flex flex-col h-full">
+                        <div id="turn-info" class="text-center mb-auto flex-shrink-0 py-1">
+                            <h2 class="text-lg font-semibold">Juegan: <span id="current-couple-playing" class="text-blue-700 font-bold"></span></h2>
+                            <div class="my-1"><p id="current-player-answering-game-large"></p><p id="partner-to-guess-game-prompt">Adivina la respuesta de <span id="partner-to-guess" class="text-purple-700 font-semibold"></span></p></div>
+                        </div>
+                        <div id="game-question-area" class="text-center my-auto flex-grow flex items-center justify-center py-1"><p id="game-question-text"></p></div>
+                        <div id="timer-display" class="timer-display text-center flex-shrink-0 py-1">00:00</div>
+                        <div id="answer-reveal-area" class="text-center my-auto hidden py-1"><h3 class="text-lg font-semibold">Respuesta de <span id="partner-whose-answer-is-revealed" class="font-bold"></span>:</h3><p id="partner-answer-reveal"></p></div>
+                        <div id="game-actions" class="flex justify-center space-x-4 my-auto flex-shrink-0 py-1">
+                            <button id="correct-answer-button" class="btn btn-success hidden w-2/5">¡Acertó!</button>
+                            <button id="incorrect-answer-button" class="btn btn-danger hidden w-2/5">¡Fallo!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="end-game-screen" class="screen screen-center-content hidden">
+                    <!-- NUEVO: Logo en End Game Screen -->
+                    <img src="images/logo-conectados.png" alt="Logo Conectados" class="screen-logo">
+                    <h2 class="text-2xl font-bold text-center text-blue-700 mb-4">¡Juego Terminado!</h2>
+                    <div class="screen-content-wrapper max-h-[50vh]"> <div id="final-scores" class="mb-4"></div> </div>
+                    <div id="winner-announcement" class="text-xl font-semibold text-center text-green-600 mb-4"></div>
+                    <div class="screen-actions-bottom w-full"> <button id="play-again-button" class="btn btn-primary w-full">Jugar de Nuevo</button> </div>
+                </div>
+
+                <div id="message-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 hidden flex items-center justify-center z-50 p-4">
+                    <div class="relative mx-auto p-5 border w-full max-w-md shadow-xl rounded-xl bg-white">
+                        <div class="mt-3 text-center">
+                            <img id="modal-image" src="" alt="" class="hidden">
+                            <h3 id="modal-title" class="modal-title-large leading-6 font-medium text-gray-900"></h3>
+                            <div class="mt-2 px-6 py-2"><p id="modal-message" class="text-sm text-gray-600"></p></div>
+                            <div id="modal-scores-summary" class="hidden"></div>
+                            <div class="items-center px-4 py-2 mt-3"><button id="modal-action-button" class="btn btn-primary w-full">Entendido</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="instructions-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 hidden flex items-center justify-center z-50 p-4">
+                    <div class="relative mx-auto p-5 border w-full max-w-lg shadow-xl rounded-xl bg-white">
+                        <div class="mt-3">
+                            <!-- NUEVO: Logo en Instructions Modal -->
+                            <img src="images/logo-conectados.png" alt="Logo Conectados" class="screen-logo">
+                            <h3 class="modal-title-large text-center leading-6 font-medium text-gray-900">Instrucciones de Conectados</h3>
+                            <div id="instructions-modal-content" class="mt-4 px-2 py-3 text-sm text-gray-600">
+                                <p><strong>Objetivo:</strong> ¡Demostrar qué tan bien conoces a tu pareja y sumar la mayor cantidad de puntos como equipo!</p>
+                                <h3>Preparación:</h3>
+                                <ul>
+                                    <li>Configura el número de parejas, turnos por jugador (preguntas del cuestionario) y el tiempo para adivinar.</li>
+                                    <li>Cada pareja ingresa sus nombres y un nombre para el equipo.</li>
+                                    <li>En secreto, cada jugador responde un cuestionario individual. ¡Estas serán las respuestas que su pareja intentará adivinar! Puedes cambiar hasta 3 preguntas de tu cuestionario si no te gustan.</li>
+                                </ul>
+                                <h3>¡A Jugar!:</h3>
+                                <ul>
+                                    <li>El juego se desarrolla por turnos entre las parejas.</li>
+                                    <li>En el turno de una pareja, un jugador (el "adivinador") intentará adivinar la respuesta que su compañero/a dio a una pregunta de su cuestionario inicial.</li>
+                                    <li>El adivinador tendrá un tiempo límite para decir su respuesta.</li>
+                                    <li>Luego, se revela la respuesta original del compañero/a.</li>
+                                    <li>Si el adivinador acierta, la pareja suma puntos equivalentes a la dificultad de la pregunta.</li>
+                                    <li>El turno luego pasa al otro jugador de la misma pareja (para adivinar sobre su compañero/a), y así sucesivamente hasta que todas las parejas hayan jugado sus turnos.</li>
+                                </ul>
+                                <h3>Puntuación:</h3>
+                                <ul>
+                                    <li>Las preguntas tienen diferentes niveles de dificultad, que otorgan más puntos.</li>
+                                    <li>La pareja con más puntos al final de todos los turnos gana.</li>
+                                </ul>
+                                <p><strong>¡Diviértanse y que gane la pareja más conectada!</strong></p>
+                            </div>
+                            <div class="items-center px-4 py-3 text-center">
+                                <button id="instructions-modal-close-button" class="btn btn-primary w-1/2">Entendido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="countdown-sound" src="sounds/countdown.mp3" preload="auto"></audio>
+    <audio id="timesup-sound" src="sounds/timesup.mp3" preload="auto"></audio>
+
+    <script>
+        // El JavaScript es el mismo que en la versión 2.1.6,
+        // solo se añaden los event listeners para los nuevos botones globales
+        // y se actualiza la función showScreen para manejar la visibilidad de estos botones.
+
+        const MAX_QUESTION_SWAPS = 3;
+		const csvData = `{{fetched_content_1}}`;
+        
+        // ... (Resto del JavaScript igual a la versión 2.1.6, incluyendo la definición de las variables globales
+        // y las funciones parseCSV, showModal, shuffleArray, resetGame, etc., hasta handleGameAnswer y endGame)
+        
+        let allQuestions = []; let gameConfig = {}; let couplesData = []; let playerQuestionnaires = {};
+        let currentScreen = 'setup-screen'; let currentPlayerAnsweringQuizId = null;
+        let gameCurrentCoupleIndex = 0; let gameCurrentPlayerIndexInCouple = 0; let gameQuestionRound = 0;
+        let gameTimerInterval; let gameTimeRemaining; let currentQuestionForGame;
+        let countdownSound, timesupSound; let modalActionCallback = null;
+        let currentQuestionnaireQuestionIndex = 0;
+
+        const screens = { setup: document.getElementById('setup-screen'), teamNames: document.getElementById('team-names-screen'), playerChoice: document.getElementById('player-choice-screen'), questionnaire: document.getElementById('questionnaire-screen'), game: document.getElementById('game-screen'), endGame: document.getElementById('end-game-screen') };
+        const numCouplesInput = document.getElementById('num-couples'); const numQuestionsInput = document.getElementById('num-questions'); const timeLimitInput = document.getElementById('time-limit'); const startSetupButton = document.getElementById('start-setup-button');
+        const teamNamesInputsContainer = document.getElementById('team-names-inputs'); const toPlayerChoiceButton = document.getElementById('to-player-choice-button');
+        const playerChoiceButtonsContainer = document.getElementById('player-choice-buttons-container'); const startGameFromChoiceButton = document.getElementById('start-game-from-choice-button'); const allQuestionnairesCompletedMessageChoice = document.getElementById('all-questionnaires-completed-message-choice');
+        const questionnaireTitleEl = document.getElementById('questionnaire-title'); const questionnairePlayerInfo = document.getElementById('questionnaire-player-info'); const questionnaireInstructions = document.getElementById('questionnaire-instructions');
+        const singleQuestionContainer = document.getElementById('single-question-container');
+        const questionProgressIndicator = document.getElementById('question-progress-indicator');
+        const prevQuestionButton = document.getElementById('prev-question-button');
+        const nextQuestionButtonQuest = document.getElementById('next-question-button-quest');
+        const swapsRemainingDisplay = document.getElementById('swaps-remaining-display');
+        const currentCouplePlayingEl = document.getElementById('current-couple-playing'); const currentPlayerAnsweringGameLargeEl = document.getElementById('current-player-answering-game-large'); const partnerToGuessEl = document.getElementById('partner-to-guess'); const gameQuestionTextEl = document.getElementById('game-question-text'); const timerDisplayEl = document.getElementById('timer-display'); const answerRevealAreaEl = document.getElementById('answer-reveal-area'); const partnerWhoseAnswerIsRevealedEl = document.getElementById('partner-whose-answer-is-revealed'); const partnerAnswerRevealEl = document.getElementById('partner-answer-reveal'); const correctAnswerButton = document.getElementById('correct-answer-button'); const incorrectAnswerButton = document.getElementById('incorrect-answer-button');
+        const finalScoresEl = document.getElementById('final-scores'); const winnerAnnouncementEl = document.getElementById('winner-announcement'); const playAgainButton = document.getElementById('play-again-button');
+        
+        const restartGameButtonGlobal = document.getElementById('restart-game-button-global');
+        const homeButtonGlobal = document.getElementById('home-button-global');
+        const instructionsButtonGlobal = document.getElementById('instructions-button-global');
+        const instructionsModal = document.getElementById('instructions-modal');
+        const instructionsModalCloseButton = document.getElementById('instructions-modal-close-button');
+
+        const messageModal = document.getElementById('message-modal'); const modalTitleEl = document.getElementById('modal-title'); const modalMessageEl = document.getElementById('modal-message'); const modalActionButton = document.getElementById('modal-action-button'); const modalImageEl = document.getElementById('modal-image'); const potentialPointsDisplayEl = document.getElementById('potential-points-display');
+        const modalScoresSummaryEl = document.getElementById('modal-scores-summary');
+
+        function parseCSV(data) { if (data.trim() === '{{fetched_content_1}}' || data.trim() === '') { return []; } let lines = data.trim().split(/\r\n|\n|\r/); if (lines.length === 0 || (lines.length === 1 && lines[0].trim() === '')) return []; const headersLine = lines.shift().replace(/^\uFEFF/, ''); const headers = headersLine.split(',').map(header => header.trim()); const questions = []; const expectedHeaderCount = 5; for (let i = 0; i < lines.length; i++) { const line = lines[i].trim(); if (!line) continue; const values = line.split(','); if (values.length >= expectedHeaderCount) { const questionObj = {}; try { questionObj.id = parseInt(values[0].trim(), 10); const preguntaEndIndex = values.length - 3; questionObj.texto = values.slice(1, preguntaEndIndex).join(',').trim().replace(/^"|"$/g, ''); questionObj.categoria = values[preguntaEndIndex].trim(); questionObj.dificultad = parseInt(values[preguntaEndIndex + 1].trim(), 10); questionObj.razon = values[preguntaEndIndex + 2].trim(); if (isNaN(questionObj.id) || !questionObj.texto || !questionObj.categoria || isNaN(questionObj.dificultad)) { console.warn(`Skipping malformed CSV line ${i+2}: "${line}"`); continue; } questions.push(questionObj); } catch (e) { console.warn(`Error parsing CSV line ${i+2}: "${line}". Error: ${e.message}`); } } else { console.warn(`Skipping CSV line ${i+2} due to insufficient columns: "${line}"`); } } return questions; }
+        
+        function showScreen(screenId) {
+            Object.keys(screens).forEach(key => {
+                if (screens[key]) {
+                    screens[key].classList.toggle('hidden', key !== screenId);
+                }
+            });
+            currentScreen = screenId;
+            const showGlobalButtons = screenId !== 'endGame';
+            homeButtonGlobal.classList.toggle('hidden', !showGlobalButtons);
+            instructionsButtonGlobal.classList.toggle('hidden', !showGlobalButtons);
+            restartGameButtonGlobal.classList.toggle('hidden', !showGlobalButtons);
+        }
+        
+        function showModal(title, message, type = 'info', buttonText = "Entendido", callback = null, imageUrl = null, showScores = false) {
+            modalTitleEl.textContent = title; modalMessageEl.textContent = message; modalActionButton.textContent = buttonText; modalActionCallback = callback;
+            if (type === 'correct' || type === 'incorrect') { const emoji = type === 'correct' ? '🎉' : '🙈'; modalTitleEl.innerHTML = `${emoji} ${title} ${emoji}`; }
+            else { modalTitleEl.textContent = title; }
+            if (imageUrl) { modalImageEl.src = imageUrl; modalImageEl.classList.remove('hidden'); }
+            else { modalImageEl.classList.add('hidden'); modalImageEl.src = ""; }
+            if (showScores && couplesData.length > 0) {
+                modalScoresSummaryEl.innerHTML = '<h4>Puntuaciones Actuales:</h4>';
+                const sortedCouples = [...couplesData].sort((a, b) => b.score - a.score);
+                sortedCouples.forEach(couple => {
+                    const scoreP = document.createElement('p');
+                    scoreP.innerHTML = `<strong>${couple.customName}:</strong> ${couple.score} pts <em>(${couple.player1Name}: ${couple.player1Score}, ${couple.player2Name}: ${couple.player2Score})</em>`;
+                    modalScoresSummaryEl.appendChild(scoreP);
+                });
+                modalScoresSummaryEl.classList.remove('hidden');
+            } else {
+                modalScoresSummaryEl.classList.add('hidden'); modalScoresSummaryEl.innerHTML = '';
+            }
+            messageModal.classList.remove('hidden');
+        }
+
+        modalActionButton.addEventListener('click', () => { messageModal.classList.add('hidden'); if (modalActionCallback) { modalActionCallback(); modalActionCallback = null; } });
+        function shuffleArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[array[i], array[j]] = [array[j], array[i]]; } return array; }
+        function resetGame() { currentQuestionnaireQuestionIndex = 0; gameConfig = { numCouples: 0, numQuestionsPerPlayer: 0, timeLimitSeconds: 0 }; couplesData = []; playerQuestionnaires = {}; currentPlayerAnsweringQuizId = null; gameCurrentCoupleIndex = 0; gameCurrentPlayerIndexInCouple = 0; gameQuestionRound = 0; if (gameTimerInterval) clearInterval(gameTimerInterval); numCouplesInput.value = 1; numQuestionsInput.value = 3; timeLimitInput.value = 30; teamNamesInputsContainer.innerHTML = ''; playerChoiceButtonsContainer.innerHTML = ''; singleQuestionContainer.innerHTML = ''; finalScoresEl.innerHTML = ''; winnerAnnouncementEl.innerHTML = ''; startGameFromChoiceButton.classList.add('hidden'); allQuestionnairesCompletedMessageChoice.classList.add('hidden'); answerRevealAreaEl.classList.add('hidden'); correctAnswerButton.classList.add('hidden'); incorrectAnswerButton.classList.add('hidden'); timerDisplayEl.textContent = "00:00"; timerDisplayEl.className = 'timer-display timer-blue'; potentialPointsDisplayEl.classList.add('hidden'); showScreen('setup'); }
+
+        startSetupButton.addEventListener('click', () => { const numC = parseInt(numCouplesInput.value); const numQ = parseInt(numQuestionsInput.value); const timeL = parseInt(timeLimitInput.value); if (isNaN(numC) || numC < 1 || numC > 10) { showModal("Error de Configuración", "El número de parejas debe estar entre 1 y 10."); return; } if (isNaN(numQ) || numQ < 1) { showModal("Error de Configuración", "El número de preguntas por cuestionario debe ser al menos 1."); return; } const totalQuestionsNeededForQuestionnaires = numQ * numC * 2; if (allQuestions.length < numQ && numQ > 0) { showModal("Error de Preguntas", `No hay suficientes preguntas (${allQuestions.length}) para ${numQ} por cuestionario.`); return; } if (allQuestions.length < totalQuestionsNeededForQuestionnaires && numQ > 0) { showModal("Advertencia de Preguntas", `Hay ${allQuestions.length} preguntas, pero se necesitan ${totalQuestionsNeededForQuestionnaires} para cuestionarios únicos.`, "info"); } if (isNaN(timeL) || timeL < 10) { showModal("Error de Configuración", "El tiempo para responder debe ser de al menos 10 segundos."); return; } gameConfig.numCouples = numC; gameConfig.numQuestionsPerPlayer = numQ; gameConfig.timeLimitSeconds = timeL; generateTeamNameInputs(); showScreen('teamNames'); });
+        
+        function generateTeamNameInputs() { teamNamesInputsContainer.innerHTML = ''; couplesData = []; for (let i = 0; i < gameConfig.numCouples; i++) { const coupleDiv = document.createElement('div'); coupleDiv.classList.add('p-3', 'border', 'border-gray-200', 'rounded-lg', 'bg-slate-50'); coupleDiv.innerHTML = ` <h3 class="text-md font-semibold text-gray-700 mb-2">Pareja ${i + 1}</h3> <div><label for="couple-${i}-custom-name" class="label-text text-sm">Nombre para la Pareja:</label><input type="text" id="couple-${i}-custom-name" class="input-field couple-custom-name-input text-sm" placeholder="Nombre del Equipo"></div> <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2"> <div><label for="couple-${i}-player-1" class="label-text text-sm">Nombre Jugador 1:</label><input type="text" id="couple-${i}-player-1" class="input-field player-name-input text-sm" placeholder="Ej: Ana" required></div> <div><label for="couple-${i}-player-2" class="label-text text-sm">Nombre Jugador 2:</label><input type="text" id="couple-${i}-player-2" class="input-field player-name-input text-sm" placeholder="Ej: Juan" required></div> </div>`; teamNamesInputsContainer.appendChild(coupleDiv); couplesData.push({ id: `pareja${i+1}`, customName: "", player1Name: "", player2Name: "", player1Id: `jugador${i*2 + 1}_pareja${i+1}`, player2Id: `jugador${i*2 + 2}_pareja${i+1}`, player1Answers: {}, player2Answers: {}, player1QuestionnaireCompleted: false, player2QuestionnaireCompleted: false, player1Score: 0, player2Score: 0, score: 0 }); } }
+        toPlayerChoiceButton.addEventListener('click', () => { let allNamesFilled = true; for (let i = 0; i < gameConfig.numCouples; i++) { const customNameInput = document.getElementById(`couple-${i}-custom-name`); const p1NameInput = document.getElementById(`couple-${i}-player-1`); const p2NameInput = document.getElementById(`couple-${i}-player-2`); const customName = customNameInput.value.trim(); const p1Name = p1NameInput.value.trim(); const p2Name = p2NameInput.value.trim(); if (!p1Name || !p2Name) { allNamesFilled = false; if (!p1Name) p1NameInput.classList.add('border-red-500'); else p1NameInput.classList.remove('border-red-500'); if (!p2Name) p2NameInput.classList.add('border-red-500'); else p2NameInput.classList.remove('border-red-500'); } else { p1NameInput.classList.remove('border-red-500'); p2NameInput.classList.remove('border-red-500'); } couplesData[i].customName = customName || `Pareja ${i + 1}`; couplesData[i].player1Name = p1Name || `Jugador 1 (P${i+1})`; couplesData[i].player2Name = p2Name || `Jugador 2 (P${i+1})`; } if (!allNamesFilled) { showModal("Nombres Incompletos", "Ingresa los nombres de todos los jugadores."); return; } preparePlayerQuestionnaires(); generatePlayerChoiceButtons(); showScreen('playerChoice'); });
+        
+        function generatePlayerChoiceButtons() { playerChoiceButtonsContainer.innerHTML = ''; let allCompleted = true; couplesData.forEach(couple => { [couple.player1Id, couple.player2Id].forEach(playerId => { const playerData = playerQuestionnaires[playerId]; const button = document.createElement('button'); button.textContent = `Cuestionario de ${playerData.playerName}`; button.classList.add('btn', 'w-full', 'text-sm', 'py-2'); button.dataset.playerId = playerId; if (playerData.completed) { button.classList.add('btn-secondary'); button.disabled = true; button.textContent = `${playerData.playerName} (Completado ✓)`; } else { button.classList.add('btn-primary'); allCompleted = false; } button.addEventListener('click', () => { currentPlayerAnsweringQuizId = playerId; currentQuestionnaireQuestionIndex = 0; displayCurrentSingleQuestion(); showScreen('questionnaire'); }); playerChoiceButtonsContainer.appendChild(button); }); }); allQuestionnairesCompletedMessageChoice.classList.toggle('hidden', !allCompleted); startGameFromChoiceButton.classList.toggle('hidden', !allCompleted); }
+        startGameFromChoiceButton.addEventListener('click', () => { gameCurrentCoupleIndex = 0; gameCurrentPlayerIndexInCouple = 0; gameQuestionRound = 0; setupNextGameTurn(); showScreen('game'); });
+
+        function preparePlayerQuestionnaires() { playerQuestionnaires = {}; let questionsPool = [...allQuestions]; couplesData.forEach(couple => { [couple.player1Id, couple.player2Id].forEach(playerId => { shuffleArray(questionsPool); let playerQ = []; if (gameConfig.numQuestionsPerPlayer > 0) { playerQ = questionsPool.slice(0, gameConfig.numQuestionsPerPlayer); if (playerQ.length < gameConfig.numQuestionsPerPlayer) { playerQ = shuffleArray([...allQuestions]).slice(0, gameConfig.numQuestionsPerPlayer); } } playerQuestionnaires[playerId] = { playerName: playerId === couple.player1Id ? couple.player1Name : couple.player2Name, coupleId: couple.id, questions: playerQ, answers: {}, completed: false, swapsUsed: 0 }; }); }); }
+
+        function displayCurrentSingleQuestion() {
+            const playerId = currentPlayerAnsweringQuizId; if (!playerId) return;
+            const playerData = playerQuestionnaires[playerId]; const coupleInfo = couplesData.find(c => c.id === playerData.coupleId);
+            questionnaireTitleEl.textContent = `Cuestionario: ${playerData.playerName}`;
+            questionnairePlayerInfo.textContent = `Pareja: ${coupleInfo.customName || `P${coupleInfo.id.slice(-1)}`}`;
+            questionnaireInstructions.textContent = `Hola ${playerData.playerName}, responde sinceramente.`;
+            const swapsLeft = MAX_QUESTION_SWAPS - playerData.swapsUsed;
+            swapsRemainingDisplay.textContent = `Cambios restantes: ${swapsLeft}`;
+            singleQuestionContainer.innerHTML = '';
+            if (!playerData.questions || playerData.questions.length === 0) { singleQuestionContainer.innerHTML = "<p>No hay preguntas asignadas para este cuestionario.</p>"; questionProgressIndicator.textContent = "Pregunta 0 de 0"; nextQuestionButtonQuest.textContent = "Finalizar Cuestionario"; prevQuestionButton.classList.add('hidden'); return; }
+            const currentQuestion = playerData.questions[currentQuestionnaireQuestionIndex];
+            if (!currentQuestion) { console.error("No hay pregunta actual en el índice:", currentQuestionnaireQuestionIndex); return; }
+            const questionDiv = document.createElement('div'); questionDiv.classList.add('h-full', 'flex', 'flex-col', 'justify-center');
+            questionDiv.innerHTML = `<div class="flex justify-between items-center mb-2"><p class="text-base text-left flex-grow mr-2">${currentQuestion.texto} <span class="text-xs text-gray-500">(Dif: ${currentQuestion.dificultad})</span></p><button type="button" class="btn btn-swap swap-question-btn-single !p-2" ${playerData.swapsUsed >= MAX_QUESTION_SWAPS ? 'disabled' : ''}>Cambiar</button></div><input type="text" id="current-questionnaire-answer" class="input-field" placeholder="Tu respuesta aquí..." value="${playerData.answers[currentQuestion.id] || ''}" required>`;
+            singleQuestionContainer.appendChild(questionDiv);
+            questionProgressIndicator.textContent = `Pregunta ${currentQuestionnaireQuestionIndex + 1} de ${playerData.questions.length}`;
+            singleQuestionContainer.querySelector('.swap-question-btn-single').addEventListener('click', handleSwapSingleQuestion);
+            prevQuestionButton.classList.toggle('hidden', currentQuestionnaireQuestionIndex === 0);
+            nextQuestionButtonQuest.textContent = (currentQuestionnaireQuestionIndex === playerData.questions.length - 1) ? "Finalizar Cuestionario" : "Siguiente Pregunta";
+        }
+        function handleSwapSingleQuestion() { const playerId = currentPlayerAnsweringQuizId; const playerData = playerQuestionnaires[playerId]; if (playerData.swapsUsed >= MAX_QUESTION_SWAPS) { showModal("Límite Alcanzado", "Ya usaste todos tus cambios.", "info"); return; } const currentQuestionIdsInQuestionnaire = playerData.questions.map(q => q.id); let availableSwapQuestions = allQuestions.filter(q => !currentQuestionIdsInQuestionnaire.includes(q.id)); shuffleArray(availableSwapQuestions); if (availableSwapQuestions.length === 0) { showModal("Sin Preguntas", "No hay más preguntas disponibles.", "info"); return; } saveCurrentQuestionnaireAnswer(); playerData.questions[currentQuestionnaireQuestionIndex] = availableSwapQuestions[0]; playerData.swapsUsed++; displayCurrentSingleQuestion(); }
+        function saveCurrentQuestionnaireAnswer() { const playerId = currentPlayerAnsweringQuizId; if(!playerId) return; const playerData = playerQuestionnaires[playerId]; if(!playerData) return; if (!playerData.questions || playerData.questions.length === 0) return; const currentQuestion = playerData.questions[currentQuestionnaireQuestionIndex]; if(!currentQuestion) return; const answerInput = document.getElementById('current-questionnaire-answer'); if (answerInput && answerInput.value.trim() !== "") { playerData.answers[currentQuestion.id] = answerInput.value.trim(); } else if (answerInput && answerInput.value.trim() === "") { delete playerData.answers[currentQuestion.id]; } }
+        prevQuestionButton.addEventListener('click', () => { if (currentQuestionnaireQuestionIndex > 0) { saveCurrentQuestionnaireAnswer(); currentQuestionnaireQuestionIndex--; displayCurrentSingleQuestion(); } });
+        nextQuestionButtonQuest.addEventListener('click', () => { const playerId = currentPlayerAnsweringQuizId; const playerData = playerQuestionnaires[playerId]; if (!playerData.questions || playerData.questions.length === 0) { playerData.completed = true; generatePlayerChoiceButtons(); showScreen('playerChoice'); currentPlayerAnsweringQuizId = null; return; } const answerInput = document.getElementById('current-questionnaire-answer'); if (!answerInput || answerInput.value.trim() === '') { showModal("Respuesta Faltante", "Por favor, responde la pregunta actual.", "info"); if(answerInput) answerInput.classList.add('border-red-500'); return; } if(answerInput) answerInput.classList.remove('border-red-500'); saveCurrentQuestionnaireAnswer(); if (currentQuestionnaireQuestionIndex < playerData.questions.length - 1) { currentQuestionnaireQuestionIndex++; displayCurrentSingleQuestion(); } else { playerData.completed = true; const couple = couplesData.find(c => c.id === playerData.coupleId); if (couple) { if (playerId === couple.player1Id) { couple.player1Answers = { ...playerData.answers }; couple.player1QuestionnaireCompleted = true; } else if (playerId === couple.player2Id) { couple.player2Answers = { ...playerData.answers }; couple.player2QuestionnaireCompleted = true; } } generatePlayerChoiceButtons(); showScreen('playerChoice'); currentPlayerAnsweringQuizId = null; } });
+
+        function setupNextGameTurn() { answerRevealAreaEl.classList.add('hidden'); correctAnswerButton.classList.add('hidden'); incorrectAnswerButton.classList.add('hidden'); potentialPointsDisplayEl.classList.add('hidden'); const totalGameQuestionsToAsk = gameConfig.numQuestionsPerPlayer * 2 * gameConfig.numCouples; if (gameQuestionRound >= totalGameQuestionsToAsk) { endGame(); return; } const currentCouple = couplesData[gameCurrentCoupleIndex]; let playerAnswering, partnerToGuessName, partnerAnswers, partnerPlayerId; if (gameCurrentPlayerIndexInCouple === 0) { playerAnswering = currentCouple.player1Name; partnerToGuessName = currentCouple.player2Name; partnerAnswers = currentCouple.player2Answers; partnerPlayerId = currentCouple.player2Id; } else { playerAnswering = currentCouple.player2Name; partnerToGuessName = currentCouple.player1Name; partnerAnswers = currentCouple.player1Answers; partnerPlayerId = currentCouple.player1Id; } currentCouplePlayingEl.textContent = `${currentCouple.customName}`; currentPlayerAnsweringGameLargeEl.textContent = playerAnswering; partnerToGuessEl.textContent = partnerToGuessName; const partnerQuestionnaire = playerQuestionnaires[partnerPlayerId]; if (!partnerQuestionnaire || !partnerQuestionnaire.questions || partnerQuestionnaire.questions.length === 0) { showModal("Error de Juego", `No se encontraron preguntas para ${partnerToGuessName}.`); endGame(); return; } const questionIndexInPartnersList = Math.floor(gameQuestionRound / (2 * gameConfig.numCouples)) % gameConfig.numQuestionsPerPlayer; if (questionIndexInPartnersList >= partnerQuestionnaire.questions.length) { showModal("Error de Juego", `Índice de pregunta fuera de rango para ${partnerToGuessName}.`); endGame(); return; } currentQuestionForGame = partnerQuestionnaire.questions[questionIndexInPartnersList]; if (!currentQuestionForGame || !currentQuestionForGame.id || !partnerAnswers.hasOwnProperty(currentQuestionForGame.id)) { showModal("Error de Juego", `Pregunta para ${partnerToGuessName} no válida o sin respuesta.`); gameQuestionRound++; setupNextGameTurn(); return; } gameQuestionTextEl.textContent = currentQuestionForGame.texto; partnerWhoseAnswerIsRevealedEl.textContent = partnerToGuessName; partnerAnswerRevealEl.textContent = ""; potentialPointsDisplayEl.textContent = `Vale: ${currentQuestionForGame.dificultad} pts`; potentialPointsDisplayEl.classList.remove('hidden'); startTimer(); }
+        function startTimer() { gameTimeRemaining = gameConfig.timeLimitSeconds; timerDisplayEl.textContent = formatTime(gameTimeRemaining); timerDisplayEl.className = 'timer-display timer-blue'; if (gameTimerInterval) clearInterval(gameTimerInterval); gameTimerInterval = setInterval(() => { gameTimeRemaining--; timerDisplayEl.textContent = formatTime(gameTimeRemaining); if (gameTimeRemaining <= 0) { clearInterval(gameTimerInterval); if (timesupSound) timesupSound.play().catch(e => console.warn("Error sound:", e)); revealAnswerAndActions(); } else if (gameTimeRemaining === 10) { if (countdownSound) countdownSound.play().catch(e => console.warn("Error sound:", e)); timerDisplayEl.className = 'timer-display timer-yellow'; } else if (gameTimeRemaining <= 5 && gameTimeRemaining > 0) { timerDisplayEl.className = 'timer-display timer-red'; } }, 1000); }
+        function formatTime(seconds) { const minutes = Math.floor(seconds / 60); const secs = seconds % 60; return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`; }
+        function revealAnswerAndActions() { if (gameTimerInterval) clearInterval(gameTimerInterval); timerDisplayEl.textContent = "¡Tiempo!"; timerDisplayEl.className = 'timer-display timer-red'; const currentCouple = couplesData[gameCurrentCoupleIndex]; let partnerAnswers = (gameCurrentPlayerIndexInCouple === 0) ? currentCouple.player2Answers : currentCouple.player1Answers; partnerAnswerRevealEl.textContent = partnerAnswers[currentQuestionForGame.id] || "No se registró respuesta."; answerRevealAreaEl.classList.remove('hidden'); correctAnswerButton.classList.remove('hidden'); incorrectAnswerButton.classList.remove('hidden'); }
+        correctAnswerButton.addEventListener('click', () => handleGameAnswer(true)); incorrectAnswerButton.addEventListener('click', () => handleGameAnswer(false));
+        
+        function handleGameAnswer(wasCorrect) {
+            correctAnswerButton.classList.add('hidden'); incorrectAnswerButton.classList.add('hidden');
+            potentialPointsDisplayEl.classList.add('hidden');
+            const currentCouple = couplesData[gameCurrentCoupleIndex];
+            const points = currentQuestionForGame.dificultad || 1;
+            let modalTitle = ""; let modalMsg = ""; let modalType = "info"; let imageUrl = null;
+
+            if (wasCorrect) {
+                currentCouple.score += points;
+                if (gameCurrentPlayerIndexInCouple === 0) { currentCouple.player1Score += points; } 
+                else { currentCouple.player2Score += points; }
+                modalTitle = `¡Sumaron ${points} puntos!`;
+                modalMsg = `¡Excelente! La pareja ${currentCouple.customName} adivinó correctamente.`;
+                modalType = 'correct';
+                imageUrl = 'images/correct-answer.png';
+            } else {
+                modalTitle = `¡No sumaron puntos!`;
+                modalMsg = `Casi... La respuesta de ${partnerWhoseAnswerIsRevealedEl.textContent} era: "${partnerAnswerRevealEl.textContent}"`;
+                modalType = 'incorrect';
+                imageUrl = 'images/incorrect-answer.png';
+            }
+            
+            showModal( modalTitle, modalMsg, modalType, "Siguiente Pregunta", () => {
+                    gameQuestionRound++;
+                    gameCurrentPlayerIndexInCouple = (gameCurrentPlayerIndexInCouple + 1) % 2;
+                    if (gameCurrentPlayerIndexInCouple === 0) { gameCurrentCoupleIndex = (gameCurrentCoupleIndex + 1) % gameConfig.numCouples; }
+                    setupNextGameTurn();
+                }, imageUrl, true 
+            );
+        }
+
+        function endGame() { if (gameTimerInterval) clearInterval(gameTimerInterval); finalScoresEl.innerHTML = ''; winnerAnnouncementEl.innerHTML = ''; let highScore = -1; let winners = []; const sortedCouples = [...couplesData].sort((a, b) => b.score - a.score); sortedCouples.forEach(couple => { const scoreP = document.createElement('p'); scoreP.classList.add('text-md', 'mb-1', 'text-center'); scoreP.innerHTML = `<strong class="text-slate-700">${couple.customName}</strong>: <span class="font-bold text-blue-600">${couple.score} pts</span> <br><span class="text-xs text-gray-600">(${couple.player1Name}: ${couple.player1Score}, ${couple.player2Name}: ${couple.player2Score})</span>`; finalScoresEl.appendChild(scoreP); if (couple.score > highScore) { highScore = couple.score; winners = [couple.customName]; } else if (couple.score === highScore && highScore !== -1) { winners.push(couple.customName); } }); if (winners.length === 0 && highScore === -1 && couplesData.length > 0) { winnerAnnouncementEl.textContent = "El juego ha terminado. ¡Nadie sumó puntos!"; } else if (winners.length === 1) { winnerAnnouncementEl.textContent = `🎉 ¡Felicidades a ${winners[0]} por ganar! 🎉`; } else if (winners.length > 1) { winnerAnnouncementEl.textContent = `¡Empate entre ${winners.join(' y ')}! ¡Felicidades!`; } else { winnerAnnouncementEl.textContent = "El juego ha terminado."; } showScreen('endGame'); }
+        playAgainButton.addEventListener('click', resetGame);
+        
+        restartGameButtonGlobal.addEventListener('click', () => {
+            if (currentScreen !== 'setup' && currentScreen !== 'endGame') {
+                if (!confirm("¿Seguro que quieres reiniciar el juego? Se perderá el progreso actual.")) {
+                    return;
+                }
+            }
+            resetGame();
+        });
+
+        homeButtonGlobal.addEventListener('click', () => {
+            window.location.href = "../index.html"; 
+        });
+
+        instructionsButtonGlobal.addEventListener('click', () => {
+            instructionsModal.classList.remove('hidden');
+        });
+
+        instructionsModalCloseButton.addEventListener('click', () => {
+            instructionsModal.classList.add('hidden');
+        });
+        
+        window.onload = () => { try { allQuestions = parseCSV(csvData); countdownSound = document.getElementById('countdown-sound'); timesupSound = document.getElementById('timesup-sound'); if (!allQuestions || allQuestions.length === 0) { showModal("Error Crítico", "No se pudieron cargar las preguntas. Verifica el CSV."); startSetupButton.disabled = true; startSetupButton.classList.replace('btn-primary','btn-secondary'); return; } numQuestionsInput.placeholder = `(Máx. ${allQuestions.length} si no se repiten)`; } catch (error) { console.error("Error (onload):", error); showModal("Error Crítico", "Error al procesar preguntas: " + error.message); startSetupButton.disabled = true; startSetupButton.classList.replace('btn-primary','btn-secondary'); } showScreen('setup'); };
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "Conectados: El desafio de las parejas",
+  "short_name": "Conectados",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "./images/icono_conectados_192_x_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/icono_conectados_512_x_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
