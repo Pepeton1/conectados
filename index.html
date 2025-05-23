@@ -265,10 +265,6 @@
     <audio id="timesup-sound" src="sounds/timesup.mp3" preload="auto"></audio>
 
     <script>
-        // El JavaScript es el mismo que en la versión 2.1.6,
-        // solo se añaden los event listeners para los nuevos botones globales
-        // y se actualiza la función showScreen para manejar la visibilidad de estos botones.
-
         const MAX_QUESTION_SWAPS = 3;
 	let allQuestions = []; // Se llenará después de cargar el CSV
         let gameConfig = {}; 
@@ -314,7 +310,7 @@
         // MODIFICADO: window.onload para cargar el CSV con fetch
         window.onload = async () => { // Convertir a función asíncrona
             try {
-                const response = await fetch('preguntas.csv'); // Carga el archivo
+		const response = await fetch('./preguntas.csv');  // Carga el archivo
                 if (!response.ok) {
                     throw new Error(`Error al cargar preguntas.csv: ${response.status} ${response.statusText}`);
                 }
@@ -339,13 +335,8 @@
             }
             showScreen('setup');
         };
-    </script>
-</body>
-</html>
-        
-        // ... (Resto del JavaScript igual a la versión 2.1.6, incluyendo la definición de las variables globales
-        // y las funciones parseCSV, showModal, shuffleArray, resetGame, etc., hasta handleGameAnswer y endGame)
-        
+    </script>       
+               
         let allQuestions = []; let gameConfig = {}; let couplesData = []; let playerQuestionnaires = {};
         let currentScreen = 'setup-screen'; let currentPlayerAnsweringQuizId = null;
         let gameCurrentCoupleIndex = 0; let gameCurrentPlayerIndexInCouple = 0; let gameQuestionRound = 0;
