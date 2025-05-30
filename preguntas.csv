@@ -1,188 +1,659 @@
-N°,Pregunta cuestionario,Categoría,Dificultad,Razón de la puntuación
-1,¿Qué emoji uso siempre en nuestros chats?,Rompehielos/Divertidas,1,Observación básica de hábitos.
-2,¿Quién seria si fuéra un personaje de un videojuego?,Rompehielos/Divertidas,2,Requiere creatividad y complicidad.
-3,¿Qué chiste malo he contado más veces?,Rompehielos/Divertidas,1,Deberían recordarlo.
-4,¿Qué superpoder ridículo elegiría para molestar a la gente?,Rompehielos/Divertidas,3,Imaginación al límite.
-5,¿Qué canción de los 90 cantaría en la ducha?,Rompehielos/Divertidas,2,Depende de su playlist secreto.
-6,¿Cuál es mi snack favorito?,Rompehielos/Divertidas,1,Observación básica de hábitos.
-7,¿Qué animal sería si pudiera transformarme?,Rompehielos/Divertidas,2,Requiere creatividad y complicidad.
-8,¿Qué app uso más en el celular (después de WhatsApp)?,Rompehielos/Divertidas,2,Preferencias digitales.
-9,¿Qué película mala veo o vería una y otra vez?,Rompehielos/Divertidas,1,Todos tienen una.
-10,¿Qué cosa absurda llevaría a un viaje al espacio?,Rompehielos/Divertidas,3,Imaginación extravagante.
-11,¿Qué deporte olímpico sería mi peor desempeño?,Rompehielos/Divertidas,2,Conocimiento de habilidades.
-12,¿Qué muletilla o frase digo cuando estoy nervioso/a?,Rompehielos/Divertidas,2,Deberían haberlo notado.
-13,¿Qué disfraz infantil usaría en una fiesta de adultos?,Rompehielos/Divertidas,3,Creatividad + humor.
-14,¿Cuál es mi hábito más molesto?,Rompehielos/Divertidas,1,Suele discutirse.
-15,¿Qué vendería en un mercado negro?,Rompehielos/Divertidas,3,Imaginación + rarezas.
-16,¿Qué serie estoy viendo actualmente?,Rompehielos/Divertidas,1,Gustos televisivos.
-17,¿Qué foto de mi infancia no mostraría por que me averguenza?,Rompehielos/Divertidas,2,Memoria visual.
-18,¿Qué olor detesto con toda mi alma?,Rompehielos/Divertidas,1,Preferencias obvias.
-19,¿De qué sería mi contenido si fuera influencer?,Rompehielos/Divertidas,3,Creatividad + autoconocimiento.
-20,¿Qué palabra inventada uso?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-21,¿Dónde fue nuestro primer beso?,Nostálgicas,1,Momento clave en la relación.
-22,¿Qué te regale en nuestro primer aniversario?,Nostálgicas,2,Memoria de detalles específicos.
-23,¿Qué me regalaste en nuestro primer aniversario?,Nostálgicas,2,Memoria de detalles específicos.
-24,¿Qué película vimos en nuestra primera cita en casa?,Nostálgicas,2,Recuerdo de noche íntima.
-25,¿Qué canción sonaba al declararnos amor?,Nostálgicas,3,Pocos notan la música en momentos emotivos.
-26,¿Cual es el error mas gracioso que cometi durante nuestro noviazgo?,Nostálgicas,2,Situación memorable pero no comentada.
-27,¿Que chiste interno o inside joke tenemos en nuestra relacion?,Nostálgicas,2,Detalle simbólico.
-28,¿Qué comida preparé que terminó en desastre?,Nostálgicas,1,Evento memorable y divertido.
-29,¿Qué prenda de ropa usaba al empezar a salir?,Nostálgicas,2,Recuerdo de outfits antiguos.
-30,¿Qué excuse inventé para verte la primera vez?,Nostálgicas,2,Detalle específico olvidable.
-31,¿En qué lugar pasamos horas hablando?,Nostálgicas,1,Sitio emblemático.
-32,¿Qué libro recomendé y nunca leiste?,Nostálgicas,3,Seguimiento a recomendaciones.
-33,¿Qué serie recomendé y nunca viste?,Nostálgicas,3,Seguimiento a recomendaciones.
-34,¿Qué desafío superamos que nos unió?,Nostálgicas,2,Recuerdo emocional no verbalizado.
-35,¿Primera vez que le mentiste?,Nostálgicas,3,Confesión incómoda.
-36,¿Cual es el objeto mas antiguo que guardo de nuestra relacion?,Nostálgicas,2,Detalle simbólico.
-37,¿Qué apodo me pusiste al principio?,Nostálgicas,1,Apodos temporales memorables.
-38,¿Qué objetivo aún no cumplimos?,Nostálgicas,2,Metas a largo plazo.
-39,"¿Qué día empezamos a ser ""oficiales""?",Nostálgicas,1,Deberias saberlo
-40,¿Qué crisis tonta casi nos hace terminar?,Nostálgicas,3,Conflictos pasados.
-41,¿Qué tradición abandonada extraño?,Nostálgicas,2,Nostalgia por rituales.
-42,¿Qué foto antigua es mi favorita y por qué?,Nostálgicas,3,Memoria visual + significado.
-43,¿Qué momento me hizo sentir más amado/a?,Profundas/Románticas,2,Recuerdo emocional compartido.
-44,¿Qué sueño personal no he cumplido?,Profundas/Románticas,2,Intuición de aspiraciones.
-45,¿Qué miedo oculto?,Profundas/Románticas,3,Atención a señales sutiles.
-46,¿Qué cualidad mía admiras?,Profundas/Románticas,1,Cualidad no verbalizada.
-47,¿Si leyera la mente con quien estrenaria mi superpoder?,Profundas/Románticas,3,Deseos o inquietudes ocultas.
-48,¿Cual es la situacion en la que me he sentido mas vulnerable?,Profundas/Románticas,2,Empatía y memoria emocional.
-49,¿Qué promesa quiero que nunca rompas?,Profundas/Románticas,1,Acuerdo tácito.
-50,¿Qué parte de mi personalidad desconoces?,Profundas/Románticas,3,Límites en la conexión.
-51,Lo mas importante que aprendi en nuestra relacion es...,Profundas/Románticas,2,Introspección y gratitud.
-52,Un sacrificio que siento que no valoras es..,Profundas/Románticas,3,Dinámicas no discutidas.
-53,Este gesto mio aun que pequeño creo que te hace sentir amado...,Profundas/Románticas,1,Detalles mencionados con cariño.
-54,¿Qué creo que cambiarías de mí?,Profundas/Románticas,3,Honestidad y tacto.
-55,¿Qué desafío me hizo sentir orgulloso/a?,Profundas/Románticas,2,Logros no verbalizados.
-56,¿Qué frase me inspira a ser mejor?,Profundas/Románticas,2,Conocimiento de filosofia de vida
-57,¿Qué deseo íntimo no he confesado?,Profundas/Románticas,3,Fantasías o vulnerabilidades.
-58,¿Qué parte de tu vida no entiendo?,Profundas/Románticas,3,Necesidades no cubiertas.
-59,¿Qué necesito escuchar más de ti?,Profundas/Románticas,2,Conciencia de inseguridades.
-60,¿Qué haría diferente si fuera nuestro último día?,Profundas/Románticas,3,Prioridades y arrepentimientos.
-61,¿Qué inseguridad tengo que me sueles apoyar?,Profundas/Románticas,3,Observación y sensibilidad.
-62,¿Qué area de nuestra relacion de pareja debemos trabajar?,Profundas/Románticas,2,Futuro y comunicación.
-63,¿Qué invento ridículo tendría en casa en el 2050?,Hipotéticas/Imaginativas,2,Creatividad + tecnología.
-64,Si nuestra relacion fuera una pelicula o serie de television seria como...,Hipotéticas/Imaginativas,2,Análisis de personalidad.
-65,¿Qué deseo pediría por los dos a un genio?,Hipotéticas/Imaginativas,3,Sincronizar prioridades.
-66,¿Que apodo ridiculo me averguenza?,Hipotéticas/Imaginativas,1,Inside jokes.
-67,¿Qué trauma mío afecta nuestra relacion?,Hipotéticas/Imaginativas,3,Autoconciencia y vulnerabilidad.
-68,¿Qué objeto inútil llevaría a un apocalipsis zombie?,Hipotéticas/Imaginativas,2,Práctico vs. humorístico.
-69,¿Qué regla absurda impondríamos como dioses?,Hipotéticas/Imaginativas,3,Filosofía de pareja.
-70,¿De qué seríamos famosos mundialmente?,Hipotéticas/Imaginativas,1,Habilidades o rarezas.
-71,¿Si pudiera viajar en el tiempo a que epoca lo haria?,Hipotéticas/Imaginativas,2,Afinidades históricas.
-72,¿Cual es nuestra cancion?,Hipotéticas/Imaginativas,1,Símbolo de la relación.
-73,"¿Si no viviera en este pais, que pais escogeria para vivir?",Hipotéticas/Imaginativas,3,Creatividad + coordinación.
-74,¿Cuál sería mi debilidad como espía?,Hipotéticas/Imaginativas,2,Tentaciones o hábitos.
-75,¿Qué pediría a cambio de vender mi alma?,Hipotéticas/Imaginativas,3,Humor negro + prioridades.
-76,Si pudiera elegir un super poder seria...,Hipotéticas/Imaginativas,3,Complementariedad.
-77,¿Si tuvieramos un restaurante de que tipo seria?,Hipotéticas/Imaginativas,2,Gustos culinarios + humor.
-78,El valor mas importante con el que vivo es...,Hipotéticas/Imaginativas,2,Valores compartidos.
-79,¿Qué habilidad mía nos salvaría en una isla desierta?,Hipotéticas/Imaginativas,1,Habilidades prácticas.
-80,¿Qué actor me interpretaria interpretaría en una película?,Hipotéticas/Imaginativas,2,Rasgos físicos/personalidad.
-81,¿Qué compra absurda haría con una fortuna?,Hipotéticas/Imaginativas,2,Deseos materialistas.
-82,¿Qué lugar público me genera fantasías contigo?,Intimas/Picantes,2,Imaginación + riesgo moderado.
-83,¿Qué prenda mía te vuelve loco/a?,Intimas/Picantes,1,Preferencias visuales.
-84,El juego de roles que me gustaria probar es...,Intimas/Picantes,3,Fantasías íntimas.
-85,La parte de mi cuerpo que creo que no valoras suficiente es...,Intimas/Picantes,2,Exploración física.
-86,La anecdota mas graciosa en la intimidad que tenemos es....,Intimas/Picantes,1,Humor leve.
-87,¿Qué pasos tendría una cita erótica diseñada por mi?,Intimas/Picantes,3,Planificación detallada.
-88,¿Qué palabra/frase me excita en la intimidad?,Intimas/Picantes,2,Preferencias verbales.
-89,¿Qué fantasía no he confesado?,Intimas/Picantes,3,Deseos ocultos.
-90,Un habito intimo mio excitante/adorable es...,Intimas/Picantes,1,Detalles tiernos.
-91,¿Qué canción describiría nuestro estilo íntimo?,Intimas/Picantes,2,Humor + autoconciencia.
-92,¿Qué juguete que no hayamos utilizado en la intimidad me gustaría incorporar?,Intimas/Picantes,3,Exploración física.
-93,Un momento intimo querepetiria es ....,Intimas/Picantes,1,Recuerdo positivo.
-94,Si nuestra relacion fuera sadico – masoquista yo seria..,Intimas/Picantes,1,Dinámicas de poder.
-95,¿Qué olor mío te atrae?,Intimas/Picantes,1,Química básica.
-96,La epoca historica en que quiero hacerlo contigo es,Intimas/Picantes,3,Creatividad + contexto.
-97,¿Qué película nos inspiró en intimidad?,Intimas/Picantes,2,Influencias culturales.
-98,Un secreto sexual mio que no has descubierto es...,Intimas/Picantes,3,Confesión de alto riesgo.
-99,¿Qué parte de mi personalidad se refleja en intimidad?,Intimas/Picantes,2,Conexión carácter-química.
-100,¿Cual seria la primer regla que pondriamos si quisieramos explorar nuestra sexualidad mas alla de donde estamos hoy?,Intimas/Picantes,3,Comunicación honesta.
-101,La habilidad absurda (ej: atrapar cacahuates con la boca) que domino es...,Rompehielos/Divertidas,3,Humor + conocimiento de rarezas.
-102,El primer detalle tuyo que me hizo pensar que eras especial para mi fue...,Nostálgicas,1,Momento clave en la relación.
-103,Si pudiera guardar un recuerdo nuestro en una cápsula del tiempo sería...,Profundas/Románticas,3,Selección simbólica de momentos clave.
-104,El pequeño detalle que me hace notar que piensas en mi durante el dia es...,Profundas/Románticas,2,Observación de hábitos cotidianos.
-105,"Si desapareciera mi memoria, ¿qué experiencia nuestra me contarías primero?",Profundas/Románticas,3,Priorización de vivencias significativas.
-106,La escapada juntos perfecta con solo 24 horas y sin planeacion previa seria...,Hipotéticas/Imaginativas,3,Imaginación + coordinación.
-107,"Si intercambiamos cuerpos, ¿qué cosa hilarante o tierna harías con el mío?",Hipotéticas/Imaginativas,3,Autoconciencia + humor.
-108,"Si nos regalaran un animal exótico (ej: un panda), ¿qué nombre le pondríamos?",Hipotéticas/Imaginativas,1,Inside jokes o preferencias.
-109,Si mañana abriéramos un negocio en pareja seria...,Hipotéticas/Imaginativas,2,Visión de equipo + roles complementarios.
-110,¿Cuál es mi color favorito?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-111,¿Qué tipo de música me gusta más?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-112,¿Cual es mi comida favorita?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-113,¿Cuál es mi postre o dulce favorito?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-114,¿Cual es mi bebida no alcoholica favorita?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-115,¿Qué temporada del año es mi favorita?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-116,¿Qué sabor de helado elijo siempre?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-117,"¿Prefiero vacaciones de descanso, vacaciones de aventura o vacaciones para conocer/aprender?",Rompehielos/Divertidas,1,Deberían haberlo notado.
-118,¿Cuál es mi bebida alcohólica favorita (si consumo)?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-119,Mi deporte favorito es...,Rompehielos/Divertidas,1,Deberían haberlo notado.
-120,Algo que siempre me hace reir a carcajadas es...,Rompehielos/Divertidas,1,Deberían haberlo notado.
-121,Si fuera un ave seria...,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
-122,¿Soy un ave madrugadora o un ave nocturna?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-123,Algo que siempre me estresa con facilidad es...,Profundas/Románticas,1,Deberían haberlo notado.
-124,"Escoge las tres palabras que me describan mejor al tomar decisiones (logico o emocional, consevador o arriesgado, relajado o estresado)",Profundas/Románticas,2,Son muchas combinaciones
-125,Mi habito mas gracioso es...,Rompehielos/Divertidas,1,Deberían haberlo notado.
-126,¿Qué frase o dicho repito mucho?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-127,¿En qué situacion me pongo tímido/a?,Rompehielos/Divertidas,1,Deberían haberlo notado.
-128,¿Cómo se llamaba mi mascota favorita de todas?,Rompehielos/Divertidas,2,Ya es cuento viejo
-129,¿Qué quería ser de niño/a?,Rompehielos/Divertidas,1,Deberias saberlo
-130,¿Cuál era mi materia favorita en el colegio?,Rompehielos/Divertidas,2,Ya es cuento viejo
-131,¿Cuál fue mi primer trabajo?,Rompehielos/Divertidas,2,Ya es cuento viejo
-132,¿Qué ciudad o país siempre he querido visitar?,Rompehielos/Divertidas,1,Deberias saberlo
-133,¿Qué juguete o objeto era mi favorito de pequeño/a?,Rompehielos/Divertidas,2,Ya es cuento viejo
-134,¿Cuál fue mi peor travesura de niño/a?,Rompehielos/Divertidas,1,Deberias saberlo
-135,¿Cuál es mi recuerdo más feliz de la infancia?,Rompehielos/Divertidas,2,Ya es cuento viejo
-136,¿Qué apodo me decían de pequeño/a?,Rompehielos/Divertidas,1,Deberias saberlo
-137,¿A qué hora suelo despertarme sin alarmas?,Rompehielos/Divertidas,1,Deberias saberlo
-138,¿Qué hago primero al levantarme?,Rompehielos/Divertidas,1,Deberias saberlo
-139,¿Cómo me relajo después de un día estresante?,Rompehielos/Divertidas,1,Deberias saberlo
-140,¿Dónde guardo las llaves de la casa?,Rompehielos/Divertidas,1,Deberias saberlo
-141,¿Qué hago siempre antes de dormir?,Rompehielos/Divertidas,1,Deberias saberlo
-142,"¿Cómo me gusta el café o el té (azúcar, leche, etc.)?",Rompehielos/Divertidas,1,Deberias saberlo
-143,¿Qué lado de la cama prefiero para dormir?,Rompehielos/Divertidas,1,Deberias saberlo
-144,¿Soy de dejar las cosas ordenadas o desordenadas?,Rompehielos/Divertidas,1,Deberias saberlo
-145,¿Qué canción tarareo sin darme cuenta?,Rompehielos/Divertidas,2,Era dificil
-146,¿Qué hago cuando estoy aburrido/a?,Rompehielos/Divertidas,2,Era dificil
-147,¿Dónde nos conocimos?,Nostálgicas,1,Deberias saberlo
-148,¿Qué fue lo primero que pensaste de mí?,Profundas/Románticas,2,Era dificil
-149,¿Cuál fue nuestra primera cita?,Nostálgicas,1,Deberias saberlo
-150,"¿Qué momento juntos te hizo pensar ""esto es especial""?",Nostálgicas,2,Era dificil
-151,¿Qué actividad disfrutamos más hacer juntos?,Rompehielos/Divertidas,1,Deberias saberlo
-152,¿Qué película hemos visto más veces juntos?,Rompehielos/Divertidas,1,Deberias saberlo
-153,¿Qué detalle tuyo me emocionó?,Nostálgicas,2,Era dificil
-154,¿Quién es mi mejor amigo/a?,Rompehielos/Divertidas,1,Deberias saberlo
-155,¿Con qué familiar tengo una relación más cercana?,Rompehielos/Divertidas,1,Deberias saberlo
-156,¿Qué tradición familiar es importante para mí?,Profundas/Románticas,1,Deberias saberlo
-157,¿Qué familiar me inspira o admiro?,Rompehielos/Divertidas,2,Era dificil
-158,¿Qué amigo/a de la infancia aún menciono?,Rompehielos/Divertidas,1,Deberias saberlo
-159,¿Qué conflicto familiar me afectó mucho?,Nostálgicas,1,Deberias saberlo
-160,¿Qué amigo/a he tenido por más tiempo?,Rompehielos/Divertidas,1,Deberias saberlo
-161,¿Qué cosa graciosa hago con mis amigos?,Rompehielos/Divertidas,1,Deberias saberlo
-162,¿Qué libro me marcó en la vida?,Rompehielos/Divertidas,2,Era dificil
-163,¿Qué celebridad me gustaba de adolescente?,Rompehielos/Divertidas,1,Deberias saberlo
-164,¿Qué asignatura odiaba en el colegio?,Rompehielos/Divertidas,2,Era dificil
-165,¿Qué me da asco?,Rompehielos/Divertidas,1,Deberias saberlo
-166,"¿Qué tipo de regalos prefiero (útiles, románticos, etc.)?",Rompehielos/Divertidas,1,Deberias saberlo
-167,¿Qué sueño recurrente tengo?,Rompehielos/Divertidas,2,Era dificil
-168,"¿Qué cosa random me emociona (ej.: ver ardillas, lluvia)?",Rompehielos/Divertidas,2,Era dificil
-169,¿Qué compraría primero si ganara la lotería?,Hipotéticas/Imaginativas,2,Era dificil
-170,¿Qué haría si tuviera un día libre sin responsabilidades?,Hipotéticas/Imaginativas,2,Era dificil
-171,¿Qué animal sería si pudiera reencarnar?,Hipotéticas/Imaginativas,2,Era dificil
-172,¿Qué haría en una isla desierta?,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
-173,¿Qué trabajo tendría en otra vida?,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
-174,¿Qué eliminaría del mundo si pudiera?,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
-175,"¿Qué lado de mi cuerpo tengo más sensible (ej.: cuello, pies)?",Intimas/Picantes,1,Deberias saberlo
-176,¿Qué parte de mi cuerpo me gusta más?,Intimas/Picantes,1,Deberias saberlo
-177,¿Qué palabra me da cosquillas si me la susurras?,Intimas/Picantes,2,Era dificil
-178,¿Qué gesto tuyo me derrite siempre?,Profundas/Románticas,1,Deberias saberlo
-179,¿Qué me pone de mal humor rápido?,Rompehielos/Divertidas,2,Era dificil
-180,¿Qué hago cuando estoy celoso/a?,Profundas/Románticas,2,Era dificil
-181,¿Qué mentira piensas que he dicho?,Profundas/Románticas,2,Era dificil
-182,¿Qué cosa hago que creo que no notas?,Profundas/Románticas,3,Imaginacion y creatividad
-183,¿Dónde me gustaría vivir en el futuro?,Rompehielos/Divertidas,2,Era dificil
-184,¿Qué sueño profesional tengo?,Profundas/Románticas,1,Deberias saberlo
-185,¿Cuántos hijos quiero tener?,Rompehielos/Divertidas,1,Deberias saberlo
-186,¿Qué habilidad quiero aprender?,Rompehielos/Divertidas,2,Era dificil
-187,¿Qué me gustaría hacer cuando me retire?,Rompehielos/Divertidas,1,Deberias saberlo
+Pregunta cuestionario,Categoría,Dificultad,Razón de la puntuación
+¿Qué emoji uso siempre en nuestros chats?,Rompehielos/Divertidas,1,Observación básica de hábitos.
+¿Quién seria si fuéra un personaje de un videojuego?,Rompehielos/Divertidas,2,Requiere creatividad y complicidad.
+¿Qué chiste malo he contado más veces?,Rompehielos/Divertidas,1,Deberían recordarlo.
+¿Qué superpoder ridículo elegiría para molestar a la gente?,Rompehielos/Divertidas,3,Imaginación al límite.
+¿Qué canción de los 90 cantaría en la ducha?,Rompehielos/Divertidas,2,Depende de su playlist secreto.
+¿Cuál es mi snack favorito?,Rompehielos/Divertidas,1,Observación básica de hábitos.
+¿Qué animal sería si pudiera transformarme?,Rompehielos/Divertidas,2,Requiere creatividad y complicidad.
+¿Qué app uso más en el celular (después de WhatsApp)?,Rompehielos/Divertidas,2,Preferencias digitales.
+¿Qué película mala veo o vería una y otra vez?,Rompehielos/Divertidas,1,Todos tienen una.
+¿Qué cosa absurda llevaría a un viaje al espacio?,Rompehielos/Divertidas,3,Imaginación extravagante.
+¿Qué deporte olímpico sería mi peor desempeño?,Rompehielos/Divertidas,2,Conocimiento de habilidades.
+¿Qué muletilla o frase digo cuando estoy nervioso/a?,Rompehielos/Divertidas,2,Deberían haberlo notado.
+¿Qué disfraz infantil usaría en una fiesta de adultos?,Rompehielos/Divertidas,3,Creatividad + humor.
+¿Cuál es mi hábito más molesto?,Rompehielos/Divertidas,1,Suele discutirse.
+¿Qué vendería en un mercado negro?,Rompehielos/Divertidas,3,Imaginación + rarezas.
+¿Qué serie estoy viendo actualmente?,Rompehielos/Divertidas,1,Gustos televisivos.
+¿Qué foto de mi infancia no mostraría por que me averguenza?,Rompehielos/Divertidas,2,Memoria visual.
+¿Qué olor detesto con toda mi alma?,Rompehielos/Divertidas,1,Preferencias obvias.
+¿De qué sería mi contenido si fuera influencer?,Rompehielos/Divertidas,3,Creatividad + autoconocimiento.
+¿Qué palabra inventada uso?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Dónde fue nuestro primer beso?,Nostálgicas,1,Momento clave en la relación.
+¿Qué te regale en nuestro primer aniversario?,Nostálgicas,2,Memoria de detalles específicos.
+¿Qué me regalaste en nuestro primer aniversario?,Nostálgicas,2,Memoria de detalles específicos.
+¿Qué película vimos en nuestra primera cita en casa?,Nostálgicas,2,Recuerdo de noche íntima.
+¿Qué canción sonaba al declararnos amor?,Nostálgicas,3,Pocos notan la música en momentos emotivos.
+¿Cual es el error mas gracioso que cometi durante nuestro noviazgo?,Nostálgicas,2,Situación memorable pero no comentada.
+¿Que chiste interno o inside joke tenemos en nuestra relacion?,Nostálgicas,2,Detalle simbólico.
+¿Qué comida preparé que terminó en desastre?,Nostálgicas,1,Evento memorable y divertido.
+¿Qué prenda de ropa usaba al empezar a salir?,Nostálgicas,2,Recuerdo de outfits antiguos.
+¿Qué excusa inventé para verte la primera vez?,Nostálgicas,2,Detalle específico olvidable.
+¿En qué lugar pasamos horas hablando?,Nostálgicas,1,Sitio emblemático.
+¿Qué libro recomendé y nunca leiste?,Nostálgicas,3,Seguimiento a recomendaciones.
+¿Qué serie recomendé y nunca viste?,Nostálgicas,3,Seguimiento a recomendaciones.
+¿Qué desafío superamos que nos unió?,Nostálgicas,2,Recuerdo emocional no verbalizado.
+¿Primera vez que le mentiste?,Nostálgicas,3,Confesión incómoda.
+¿Cual es el objeto mas antiguo que guardo de nuestra relacion?,Nostálgicas,2,Detalle simbólico.
+¿Qué apodo me pusiste al principio?,Nostálgicas,1,Apodos temporales memorables.
+¿Qué objetivo aún no cumplimos?,Nostálgicas,2,Metas a largo plazo.
+"¿Qué día empezamos a ser ""oficiales""?",Nostálgicas,1,Deberias saberlo
+¿Qué crisis tonta casi nos hace terminar?,Nostálgicas,3,Conflictos pasados.
+¿Qué tradición abandonada extraño?,Nostálgicas,2,Nostalgia por rituales.
+¿Qué foto antigua es mi favorita y por qué?,Nostálgicas,3,Memoria visual + significado.
+¿Qué momento me hizo sentir más amado/a?,Profundas/Románticas,2,Recuerdo emocional compartido.
+¿Qué sueño personal no he cumplido?,Profundas/Románticas,2,Intuición de aspiraciones.
+¿Qué miedo oculto?,Profundas/Románticas,3,Atención a señales sutiles.
+¿Qué cualidad mía admiras?,Profundas/Románticas,1,Cualidad no verbalizada.
+¿Si leyera la mente con quien estrenaria mi superpoder?,Profundas/Románticas,3,Deseos o inquietudes ocultas.
+¿Cual es la situacion en la que me he sentido mas vulnerable?,Profundas/Románticas,2,Empatía y memoria emocional.
+¿Qué promesa quiero que nunca rompas?,Profundas/Románticas,1,Acuerdo tácito.
+¿Qué parte de mi personalidad desconoces?,Profundas/Románticas,3,Límites en la conexión.
+Lo mas importante que aprendi en nuestra relacion es...,Profundas/Románticas,2,Introspección y gratitud.
+Un sacrificio que siento que no valoras es..,Profundas/Románticas,3,Dinámicas no discutidas.
+Este gesto mio aun que pequeño creo que te hace sentir amado...,Profundas/Románticas,1,Detalles mencionados con cariño.
+¿Qué creo que cambiarías de mí?,Profundas/Románticas,3,Honestidad y tacto.
+¿Qué desafío me hizo sentir orgulloso/a?,Profundas/Románticas,2,Logros no verbalizados.
+¿Qué frase me inspira a ser mejor?,Profundas/Románticas,2,Conocimiento de filosofia de vida
+¿Qué deseo íntimo no he confesado?,Profundas/Románticas,3,Fantasías o vulnerabilidades.
+¿Qué parte de tu vida no entiendo?,Profundas/Románticas,3,Necesidades no cubiertas.
+¿Qué necesito escuchar más de ti?,Profundas/Románticas,2,Conciencia de inseguridades.
+¿Qué haría diferente si fuera nuestro último día?,Profundas/Románticas,3,Prioridades y arrepentimientos.
+¿Qué inseguridad tengo que me sueles apoyar?,Profundas/Románticas,3,Observación y sensibilidad.
+¿Qué area de nuestra relacion de pareja debemos trabajar?,Profundas/Románticas,2,Futuro y comunicación.
+¿Qué invento ridículo tendría en casa en el 2050?,Hipotéticas/Imaginativas,2,Creatividad + tecnología.
+Si nuestra relacion fuera una pelicula o serie de television seria como...,Hipotéticas/Imaginativas,2,Análisis de personalidad.
+¿Qué deseo pediría por los dos a un genio?,Hipotéticas/Imaginativas,3,Sincronizar prioridades.
+¿Que apodo ridiculo me averguenza?,Hipotéticas/Imaginativas,1,Inside jokes.
+¿Qué trauma mío afecta nuestra relacion?,Hipotéticas/Imaginativas,3,Autoconciencia y vulnerabilidad.
+¿Qué objeto inútil llevaría a un apocalipsis zombie?,Hipotéticas/Imaginativas,2,Práctico vs. humorístico.
+¿Qué regla absurda impondría si fuera un dios/dictador?,Hipotéticas/Imaginativas,3,Filosofía de pareja.
+¿De qué seríamos famosos mundialmente?,Hipotéticas/Imaginativas,1,Habilidades o rarezas.
+¿Si pudiera viajar en el tiempo a que epoca lo haria?,Hipotéticas/Imaginativas,2,Afinidades históricas.
+¿Cual es nuestra cancion?,Hipotéticas/Imaginativas,1,Símbolo de la relación.
+"¿Si no viviera en este pais, que pais escogeria para vivir?",Hipotéticas/Imaginativas,3,Creatividad + coordinación.
+¿Cuál sería mi debilidad como espía?,Hipotéticas/Imaginativas,2,Tentaciones o hábitos.
+¿Qué pediría a cambio de vender mi alma?,Hipotéticas/Imaginativas,3,Humor negro + prioridades.
+Si pudiera elegir un super poder seria...,Hipotéticas/Imaginativas,3,Complementariedad.
+¿Si tuvieramos un restaurante de que tipo seria?,Hipotéticas/Imaginativas,2,Gustos culinarios + humor.
+El valor mas importante con el que vivo es...,Hipotéticas/Imaginativas,2,Valores compartidos.
+¿Qué habilidad mía nos salvaría en una isla desierta?,Hipotéticas/Imaginativas,1,Habilidades prácticas.
+¿Qué actor me interpretaria interpretaría en una película?,Hipotéticas/Imaginativas,2,Rasgos físicos/personalidad.
+¿Qué compra absurda haría con una fortuna?,Hipotéticas/Imaginativas,2,Deseos materialistas.
+¿Qué lugar público me genera fantasías contigo?,Intimas/Picantes,2,Imaginación + riesgo moderado.
+¿Qué prenda mía te vuelve loco/a?,Intimas/Picantes,1,Preferencias visuales.
+El juego de roles que me gustaria probar es...,Intimas/Picantes,3,Fantasías íntimas.
+La parte de mi cuerpo que creo que no valoras suficiente es...,Intimas/Picantes,2,Exploración física.
+La anecdota mas graciosa en la intimidad que tenemos es....,Intimas/Picantes,1,Humor leve.
+¿Qué pasos tendría una cita erótica diseñada por mi?,Intimas/Picantes,3,Planificación detallada.
+¿Qué palabra/frase me excita en la intimidad?,Intimas/Picantes,2,Preferencias verbales.
+¿Qué fantasía no he confesado?,Intimas/Picantes,3,Deseos ocultos.
+Un habito intimo mio excitante/adorable es...,Intimas/Picantes,1,Detalles tiernos.
+¿Qué canción describiría nuestro estilo íntimo?,Intimas/Picantes,2,Humor + autoconciencia.
+¿Qué juguete que no hayamos utilizado en la intimidad me gustaría incorporar?,Intimas/Picantes,3,Exploración física.
+Un momento intimo querepetiria es ....,Intimas/Picantes,1,Recuerdo positivo.
+Si nuestra relacion fuera sadico – masoquista yo seria..,Intimas/Picantes,1,Dinámicas de poder.
+¿Qué olor mío te atrae?,Intimas/Picantes,1,Química básica.
+La epoca historica en que quiero hacerlo contigo es,Intimas/Picantes,3,Creatividad + contexto.
+¿Qué película nos inspiró en intimidad?,Intimas/Picantes,2,Influencias culturales.
+Un secreto sexual mio que no has descubierto es...,Intimas/Picantes,3,Confesión de alto riesgo.
+¿Qué parte de mi personalidad se refleja en intimidad?,Intimas/Picantes,2,Conexión carácter-química.
+¿Cual seria la primer regla que pondriamos si quisieramos explorar nuestra sexualidad mas alla de donde estamos hoy?,Intimas/Picantes,3,Comunicación honesta.
+La habilidad absurda (ej: atrapar cacahuates con la boca) que domino es...,Rompehielos/Divertidas,3,Humor + conocimiento de rarezas.
+El primer detalle tuyo que me hizo pensar que eras especial para mi fue...,Nostálgicas,1,Momento clave en la relación.
+Si pudiera guardar un recuerdo nuestro en una cápsula del tiempo sería...,Profundas/Románticas,3,Selección simbólica de momentos clave.
+El pequeño detalle que me hace notar que piensas en mi durante el dia es...,Profundas/Románticas,2,Observación de hábitos cotidianos.
+"Si desapareciera mi memoria, ¿qué experiencia nuestra me contarías primero?",Profundas/Románticas,3,Priorización de vivencias significativas.
+La escapada juntos perfecta con solo 24 horas y sin planeacion previa seria...,Hipotéticas/Imaginativas,3,Imaginación + coordinación.
+"Si intercambiamos cuerpos, ¿qué cosa hilarante o tierna harías con el mío?",Hipotéticas/Imaginativas,3,Autoconciencia + humor.
+"Si nos regalaran un animal exótico (ej: un panda), ¿qué nombre le pondríamos?",Hipotéticas/Imaginativas,1,Inside jokes o preferencias.
+Si mañana abriéramos un negocio en pareja seria...,Hipotéticas/Imaginativas,2,Visión de equipo + roles complementarios.
+¿Cuál es mi color favorito?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Qué tipo de música me gusta más?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Cual es mi comida favorita?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Cuál es mi postre o dulce favorito?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Cual es mi bebida no alcoholica favorita?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Qué temporada del año es mi favorita?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Qué sabor de helado elijo siempre?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+"¿Prefiero vacaciones de descanso, vacaciones de aventura o vacaciones para conocer/aprender?",Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Cuál es mi bebida alcohólica favorita (si consumo)?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+Mi deporte favorito es...,Rompehielos/Divertidas,1,Deberían haberlo notado.
+Algo que siempre me hace reir a carcajadas es...,Rompehielos/Divertidas,1,Deberían haberlo notado.
+Si fuera un ave seria...,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
+¿Soy un ave madrugadora o un ave nocturna?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+Algo que siempre me estresa con facilidad es...,Profundas/Románticas,1,Deberían haberlo notado.
+"Escoge las tres palabras que me describan mejor al tomar decisiones (logico o emocional, consevador o arriesgado, relajado o estresado)",Profundas/Románticas,2,Son muchas combinaciones
+Mi habito mas gracioso es...,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Qué frase o dicho repito mucho?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿En qué situacion me pongo tímido/a?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Cómo se llamaba mi mascota favorita de todas?,Rompehielos/Divertidas,2,Ya es cuento viejo
+¿Qué quería ser de niño/a?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Cuál era mi materia favorita en el colegio?,Rompehielos/Divertidas,2,Ya es cuento viejo
+¿Cuál fue mi primer trabajo?,Rompehielos/Divertidas,2,Ya es cuento viejo
+¿Qué ciudad o país siempre he querido visitar?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué juguete o objeto era mi favorito de pequeño/a?,Rompehielos/Divertidas,2,Ya es cuento viejo
+¿Cuál fue mi peor travesura de niño/a?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Cuál es mi recuerdo más feliz de la infancia?,Rompehielos/Divertidas,2,Ya es cuento viejo
+¿Qué apodo me decían de pequeño/a?,Rompehielos/Divertidas,1,Deberias saberlo
+¿A qué hora suelo despertarme sin alarmas?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué hago primero al levantarme?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Cómo me relajo después de un día estresante?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Dónde guardo las llaves de la casa?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué hago siempre antes de dormir?,Rompehielos/Divertidas,1,Deberias saberlo
+"¿Cómo me gusta el café o el té (azúcar, leche, etc.)?",Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué lado de la cama prefiero para dormir?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Soy de dejar las cosas ordenadas o desordenadas?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué canción tarareo sin darme cuenta?,Rompehielos/Divertidas,2,Era dificil
+¿Qué hago cuando estoy aburrido/a?,Rompehielos/Divertidas,2,Era dificil
+¿Dónde nos conocimos?,Nostálgicas,1,Deberias saberlo
+¿Qué fue lo primero que pensaste de mí?,Profundas/Románticas,2,Era dificil
+¿Cuál fue nuestra primera cita?,Nostálgicas,1,Deberias saberlo
+"¿Qué momento juntos te hizo pensar ""esto es especial""?",Nostálgicas,2,Era dificil
+¿Qué actividad disfrutamos más hacer juntos?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué película hemos visto más veces juntos?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué detalle tuyo me emocionó?,Nostálgicas,2,Era dificil
+¿Quién es mi mejor amigo/a?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Con qué familiar tengo una relación más cercana?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué tradición familiar es importante para mí?,Profundas/Románticas,1,Deberias saberlo
+¿Qué familiar me inspira o admiro?,Rompehielos/Divertidas,2,Era dificil
+¿Qué amigo/a de la infancia aún menciono?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué conflicto familiar me afectó mucho?,Nostálgicas,1,Deberias saberlo
+¿Qué amigo/a he tenido por más tiempo?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué cosa graciosa hago con mis amigos?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué libro me marcó en la vida?,Rompehielos/Divertidas,2,Era dificil
+¿Qué celebridad me gustaba de adolescente?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué asignatura odiaba en el colegio?,Rompehielos/Divertidas,2,Era dificil
+¿Qué me da asco?,Rompehielos/Divertidas,1,Deberias saberlo
+"¿Qué tipo de regalos prefiero (útiles, románticos, etc.)?",Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué sueño recurrente tengo?,Rompehielos/Divertidas,2,Era dificil
+"¿Qué cosa random me emociona (ej.: ver ardillas, lluvia)?",Rompehielos/Divertidas,2,Era dificil
+¿Qué compraría primero si ganara la lotería?,Hipotéticas/Imaginativas,2,Era dificil
+¿Qué haría si tuviera un día libre sin responsabilidades?,Hipotéticas/Imaginativas,2,Era dificil
+¿Qué animal sería si pudiera reencarnar?,Hipotéticas/Imaginativas,2,Era dificil
+¿Qué haría en una isla desierta?,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
+¿Qué trabajo tendría en otra vida?,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
+¿Qué eliminaría del mundo si pudiera?,Hipotéticas/Imaginativas,3,Imaginacion y creatividad
+"¿Qué lado de mi cuerpo tengo más sensible (ej.: cuello, pies)?",Intimas/Picantes,1,Deberias saberlo
+¿Qué parte de mi cuerpo me gusta más?,Intimas/Picantes,1,Deberias saberlo
+¿Qué palabra me da cosquillas si me la susurras?,Intimas/Picantes,2,Era dificil
+¿Qué gesto tuyo me derrite siempre?,Profundas/Románticas,1,Deberias saberlo
+¿Qué me pone de mal humor rápido?,Rompehielos/Divertidas,2,Era dificil
+¿Qué hago cuando estoy celoso/a?,Profundas/Románticas,2,Era dificil
+¿Qué mentira piensas que he dicho?,Profundas/Románticas,2,Era dificil
+¿Qué cosa hago que creo que no notas?,Profundas/Románticas,3,Imaginacion y creatividad
+¿Dónde me gustaría vivir en el futuro?,Rompehielos/Divertidas,2,Era dificil
+¿Qué sueño profesional tengo?,Profundas/Románticas,1,Deberias saberlo
+¿Cuántos hijos quiero tener?,Rompehielos/Divertidas,1,Deberias saberlo
+¿Qué habilidad quiero aprender?,Rompehielos/Divertidas,2,Era dificil
+¿Qué me gustaría hacer cuando me retire?,Rompehielos/Divertidas,1,Deberias saberlo
+Cual seria mi ultimo deseo si estuviera condenado a morir?,Hipotéticas/Imaginativas,3,Creativa y reflexiva
+¿Qué sonido me molesta más que cualquier otro?,Rompehielos/Divertidas,1,Preferencias básicas obvias.
+¿Qué meme me representa mejor?,Rompehielos/Divertidas,1,Observación básica de humor digital.
+¿Qué frase uso cuando estoy tratando de evitar una conversación incómoda?,Rompehielos/Divertidas,2,Reconocimiento de evasivas personales.
+"¿Cuál es mi ""placer culposo"" musical que canto a todo pulmón cuando estoy solo/a?",Rompehielos/Divertidas,1,Gustos secretos pero inferibles.
+¿Qué animal me representa y por que?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué manía tengo cuando estoy concentrado/a?,Rompehielos/Divertidas,1,Hábitos visibles y repetitivos.
+¿Cuál sería mi nombre de artista si fuera rapero?,Rompehielos/Divertidas,3,Creatividad + conocimiento de personalidad.
+¿Qué objeto absurdo usaría como arma en defensa propia si estuviera solo/a en un callejon vacio?,Rompehielos/Divertidas,3,Humor e imaginación extrema.
+"Si mi vida fuera un reality show, ¿cuál sería/como se llamaria?",Rompehielos/Divertidas,2,Requiere creatividad y conocimiento del humor/drama personal.
+¿Qué color detesto usar aunque me lo regalen?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué tipo de pizza siempre ordeno?,Rompehielos/Divertidas,1,Preferencia alimentaria constante.
+¿Qué objeto siempre pierdo?,Rompehielos/Divertidas,1,Hábitos cotidianos evidentes.
+¿Cuál es mi marca favorita de ropa?,Rompehielos/Divertidas,1,Hábito visible y fácil de notar.
+¿Qué personaje de comedia me describe mejor en mis momentos más torpes?,Rompehielos/Divertidas,1,Autopercepción y humor compartido.
+¿Qué actividad me hace procrastinar más?,Rompehielos/Divertidas,2,Patrones de comportamiento.
+¿Qué reality show sería mi guilty pleasure?,Rompehielos/Divertidas,2,Preferencias televisivas no confesadas.
+¿Qué animal representaría mejor nuestra relación?,Hipotéticas/Imaginativas,2,Analogía creativa sobre dinámica de pareja.
+¿Cuál sería mi nombre de luchador/a profesional y mi movimiento estrella?,Rompehielos/Divertidas,3,Pura imaginación y humor.
+¿Qué cosa coleccionaba o colecciono?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué talento oculto tengo que pocos conocen?,Rompehielos/Divertidas,2,Habilidades no evidentes.
+¿Qué hobbie me gustaría tener pero no practico?,Rompehielos/Divertidas,2,Intereses ocultos o ideales.
+"¿Qué canción me pone instantáneamente de buen humor, sin importar qué?",Rompehielos/Divertidas,1,Observación de reacciones.
+¿Qué profesión diferente a lo que hago actualmente me quedaría perfecta?,Rompehielos/Divertidas,3,Creatividad + análisis de personalidad.
+¿Qué comida pediría en mi última cena?,Rompehielos/Divertidas,1,Gustos alimenticios básicos.
+"Si fuéramos vecinos, ¿qué excusa inventarías para hablar conmigo?",Hipotéticas/Imaginativas,3,Inventiva romántica.
+"¿Cuál es mi ""uniforme"" para estar en casa un domingo?",Rompehielos/Divertidas,1,Hábito observable.
+¿Qué parte de mi cuerpo me gusta presumir?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué invento inútil pero divertido crearía?,Rompehielos/Divertidas,3,Imaginación extravagante.
+¿Qué frase diría si fuera sticker de WhatsApp?,Rompehielos/Divertidas,2,Expresiones recurrentes.
+¿Qué canción cantamos juntos sin vergüenza alguna?,Nostálgicas,1,Momento musical compartido.
+"Si pudiera tener una conversación con un animal, ¿cuál elegiría y qué le preguntaría?",Rompehielos/Divertidas,2,Creatividad y prioridades curiosas.
+¿Qué superstición sigo en secreto?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+"¿Si fuera un villano,qué superhéroe sería mi némesis?",Rompehielos/Divertidas,3,Creatividad + antipatías.
+¿Qué lugar visitamos que terminó siendo completamente distinto a lo esperado?,Nostálgicas,2,Experiencia memorable no verbalizada.
+¿Qué app de mi teléfono borraría si supiera que la vas a revisar (y no es lo que piensas)?,Rompehielos/Divertidas,2,Secretos digitales menores.
+¿Qué lugar frecuento cuando quiero estar a solas?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué gesto hago cuando estoy pensando?,Rompehielos/Divertidas,1,Tics observables.
+¿Qué evento familiar nos hizo reír hasta llorar?,Nostálgicas,3,Recuerdo emocional intenso.
+¿Cuál es la teoría de conspiración más tonta en la que secretamente creo un poquito?,Rompehielos/Divertidas,3,Pensamientos ocultos y absurdos.
+¿Qué serie veo una y otra vez sin cansarme?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué frase digo cuando algo me sale mal?,Rompehielos/Divertidas,1,Expresiones características.
+¿Qué me relaja instantáneamente?,Rompehielos/Divertidas,1,Observación sensorial básica.
+¿Qué palabra o expresión extranjera uso aunque no domino?,Rompehielos/Divertidas,1,Deberían haberlo notado.
+¿Qué objeto cotidiano personifico o le hablo como si tuviera vida?,Rompehielos/Divertidas,2,Hábitos peculiares.
+¿Qué palabra no pronuncio bien pero insisto en decirla?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué cosa random colecciono sin darme cuenta?,Rompehielos/Divertidas,2,Hábitos inconscientes.
+¿Qué instrumento tocaría en una banda?,Rompehielos/Divertidas,1,Habilidades conocidas.
+¿Qué cosa haría si nadie pudiera juzgarme por ello?,Profundas/Románticas,3,Vulnerabilidad y deseo oculto.
+"¿Cuál es mi ""arma secreta"" para ganar una discusión trivial?",Rompehielos/Divertidas,1,Patrones de comportamiento.
+¿Qué programa de televisión me da vergüenza admitir que veo?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué superstición tonta tengo?,Rompehielos/Divertidas,2,Creencias personales menores.
+¿Qué moda pasada jamás repetiría?,Rompehielos/Divertidas,2,Memoria visual + autocrítica.
+¿Qué parte de ti quiero conocer mejor emocionalmente?,Profundas/Románticas,2,Introspección y conexión emocional.
+"Si me perdiera en un centro comercial, ¿en qué tipo de tienda me encontrarías?",Rompehielos/Divertidas,1,Preferencias conocidas.
+¿Qué objeto rompo siempre por accidente?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué emoji uso cuando estoy incómodo?,Rompehielos/Divertidas,1,Patrones de comunicación digital.
+¿Qué hábito mío cambiarías si pudieras?,Profundas/Románticas,3,Honestidad con tacto.
+¿Qué animal doméstico no tendría jamás?,Rompehielos/Divertidas,1,Preferencias claras.
+¿Qué deporte extremo jamás intentaría?,Rompehielos/Divertidas,2,Conocimiento de límites personales.
+¿Qué película nos vio discutir durante horas después de verla?,Nostálgicas,2,Impacto cultural en la relación.
+¿Cuál es el peor regalo que he hecho (sin darme cuenta en su momento)?,Rompehielos/Divertidas,3,Memoria y honestidad sobre errores.
+¿Cuál es mi frase favorita para empezar el día?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué tema de conversación me aburre mortalmente?,Rompehielos/Divertidas,2,Tolerancia a temas específicos.
+¿Qué villano de cine entendería mi punto de vista?,Rompehielos/Divertidas,3,Análisis filosófico complejo.
+¿Qué objeto simbólico usaría para describir nuestra relación actual?,Hipotéticas/Imaginativas,3,Abstracción emocional.
+¿Qué tarea del hogar pospongo hasta el infinito y más allá?,Rompehielos/Divertidas,1,Hábitos y procrastinación.
+¿Qué regalo me daría más vergüenza recibir en público?,Rompehielos/Divertidas,3,Situaciones embarazosas hipotéticas.
+¿Qué canción cantaría en karaoke sin vergüenza?,Rompehielos/Divertidas,2,Preferencias musicales íntimas.
+¿Qué serie abandonamos sin terminar?,Rompehielos/Divertidas,1,Gustos televisivos no concluidos.
+¿Qué recuerdo vergonzoso de nuestra relación me hace reír ahora?,Nostálgicas,2,Superación y humor sobre el pasado.
+"¿Duermo del lado derecho, izquierdo o boca arriba?",Rompehielos/Divertidas,1,Hábitos de sueño básicos.
+¿Qué palabra inventada usamos solo nosotros?,Nostálgicas,1,Jerga de pareja consolidada.
+¿Qué experiencia me marcó antes de conocernos que aún afecta nuestra relación?,Nostálgicas,3,Contexto emocional pasado.
+¿Cuál fue el primer viaje o escapada que hicimos juntos?,Nostálgicas,1,Hito importante.
+¿Dónde fue nuestra primera pelea tonta?,Nostálgicas,2,Recuerdo emocional selectivo.
+¿Qué comida rara probaría solo por amor?,Hipotéticas/Imaginativas,2,Compromiso + humor.
+¿Qué pequeño detalle de cuando empezamos a salir aún me derrite?,Nostálgicas,2,Sensibilidad a gestos pasados.
+¿Qué tipo de música nunca me verían escuchando?,Rompehielos/Divertidas,2,Límites en gustos musicales.
+¿Qué promesa rompí y nunca confesé?,Nostálgicas,3,Confesión de vulnerabilidad.
+¿Qué comida me negué a probar durante años?,Rompehielos/Divertidas,1,Historia alimentaria personal.
+¿Qué rutina diaria harías diferente si yo no estuviera presente?,Profundas/Románticas,2,Ajustes inconscientes.
+¿Qué consejo sobre relaciones que nos dieron al principio ignoramos (y nos fue bien/mal)?,Nostálgicas,2,Memoria de influencias externas.
+¿Qué regalo improvisado te sorprendió?,Nostálgicas,2,Memoria de detalles espontáneos.
+¿Qué detalle pequeño me encanta de ti pero no menciono?,Profundas/Románticas,1,Detalles silenciosos.
+"¿Cuál fue el momento más ""película romántica"" que hemos vivido?",Nostálgicas,1,Recuerdo idealizado pero compartido.
+¿Qué canción canto mal pero con pasión?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué me da más flojera hacer en casa?,Rompehielos/Divertidas,1,Tareas domésticas odiadas.
+¿Qué error tuyo aprendí a amar?,Nostálgicas,3,Aceptación profunda de imperfecciones.
+¿Qué desafío personal mío superaste conmigo de una forma inolvidable?,Nostálgicas,2,Apoyo y memoria emocional.
+¿Qué cosa perdí y nunca pude encontrar?,Rompehielos/Divertidas,2,Anécdotas personales.
+¿Qué apodo cariñoso me pusiste que nunca usaste en público?,Nostálgicas,2,Intimidad en la relación.
+¿Cuál es la mentira piadosa más grande que nos hemos dicho por amor?,Nostálgicas,3,Confesión delicada.
+¿Cuál es mi comida rápida favorita?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué nombre le pondría a mi canal de YouTube?,Rompehielos/Divertidas,3,Creatividad + autoconocimiento.
+¿Qué momento nos hizo sentir equipo por primera vez?,Nostálgicas,3,Intuición de conexión profunda.
+¿Qué objeto simbólico de una etapa pasada de nuestra relación aún conservo en secreto?,Nostálgicas,2,Valor sentimental oculto.
+¿Qué tradición navideña o de otra festividad odio?,Rompehielos/Divertidas,2,Preferencias culturales específicas.
+Algo que me prestaron y nunca devolvi fue...,Nostálgicas,1,Detalle tangible de convivencia.
+¿Qué objeto llevarías a una cita en el espacio?,Hipotéticas/Imaginativas,3,Imaginación extrema.
+"Si tuviéramos un ""aniversario alternativo"" por algo gracioso que nos pasó, ¿cuál sería?",Nostálgicas,2,Humor y creación de tradiciones propias.
+¿Cuál fue el momento más incómodo de nuestra relación?,Nostálgicas,2,Situaciones embarazosas compartidas.
+¿Qué canción asocias a nuestro primer viaje?,Nostálgicas,2,Memoria sensorial auditiva.
+¿Qué ritual tenemos que debería repetirse siempre?,Nostálgicas,1,Tradición positiva.
+¿Qué promesa tonta nos hicimos al principio que aún recordamos?,Nostálgicas,1,Pactos juveniles o inocentes.
+¿Qué frase cursi te dije al principio que ahora me da pena?,Nostálgicas,2,Evolución del romance.
+¿Qué pregunta jamás me has hecho pero quieres saber?,Profundas/Románticas,3,Interés latente.
+¿Cuál fue la primera impresión que tuvieron mis amigos/familia de ti?,Nostálgicas,2,"Percepción externa, tema de conversación."
+¿Qué película me hace llorar aunque la haya visto mil veces?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué prenda de ropa mía odiabas pero nunca me dijiste?,Nostálgicas,2,Honestidad tardía sobre gustos.
+¿Qué viaje hicimos que fue decepcionante pero lo disfrutamos igual?,Nostálgicas,2,Resiliencia emocional.
+¿Qué aventura espontánea nuestra es mi favorita?,Nostálgicas,1,Recuerdo de impulsividad compartida.
+¿Que es lo que hago cuando miento que me descubre?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+"¿En qué momento supiste que yo era ""el/la indicado/a""?",Nostálgicas,3,Momento de conexión profunda.
+¿Qué foto borraría por vergüenza pero atesoras?,Nostálgicas,3,Contradicción emocional compleja.
+¿Qué palabra describe cómo te sientes al despertar junto a mí?,Profundas/Románticas,2,Conciencia emocional.
+¿Qué cita que planifiqué resultó en desastre?,Nostálgicas,1,Eventos memorables negativos.
+¿Qué crisis nos fortaleció sin darnos cuenta?,Profundas/Románticas,2,Reconocimiento de crecimiento mutuo.
+¿Qué libro le recomendarías a alguien que quiera entenderte mejor?,Profundas/Románticas,3,Autoconocimiento indirecto.
+¿Cuál es el cumplido más extraño pero significativo que te he dado?,Nostálgicas,2,Formas peculiares de expresar afecto.
+¿Qué mentira piadosa me dijiste al principio?,Nostálgicas,3,Confesiones incómodas.
+¿Qué canción me dedicarías en este momento de nuestra relación?,Hipotéticas/Imaginativas,2,Conexión emocional musical.
+¿Qué es lo que más me gusta de despertar a tu lado?,Profundas/Románticas,1,Apreciación de la cotidianeidad íntima.
+¿Qué familiar tuyo me intimidaba más al conocerlo?,Nostálgicas,2,Primeras impresiones familiares.
+La herida infanil que me ayudaste a sanar es ....,Profundas/Románticas,3,Vulnerabilidad transformadora.
+¿Qué prenda de vestir te gustaría que usara más seguido?,Intimas/Picantes,1,Preferencias visuales.
+¿Qué actividad hacíamos mucho antes y ya no?,Nostálgicas,1,Cambios en la rutina de pareja.
+¿Qué versión de mí desconocías hace un año?,Profundas/Románticas,2,Conciencia de evolución personal.
+La fantasia romantica que nunca te he compartido es...,Intimas/Picantes,3,Intimidad emocional y sexual.
+El momento en que senti que nuestro amor podia superar cualquier cosa es...,Profundas/Románticas,2,Revelación de fortaleza en la relación.
+¿Qué promesa nos hicimos que no hemos cumplido?,Nostálgicas,2,Compromisos pendientes.
+¿Qué miedo tuyo guardo en secreto?,Profundas/Románticas,3,Confianza absoluta.
+La situacion íntima que me hace sentir más conectado/a es ...,Intimas/Picantes,2,Nivel físico y emocional.
+Mi mayor miedo respecto a nuestro futuro juntos es ...,Profundas/Románticas,3,Vulnerabilidad y necesidad de seguridad.
+¿Cuál fue nuestro primer gran pleito y por qué?,Nostálgicas,2,Conflictos fundacionales.
+¿Qué enseñanza me diste sin intentarlo?,Profundas/Románticas,1,Impacto no verbalizado.
+¿Qué palabra prohibida usarías en intimidad?,Intimas/Picantes,3,Exploración límite.
+¿Qué cualidad tuya me inspira a ser una mejor persona cada día?,Profundas/Románticas,1,Impacto positivo observable.
+¿Qué lugar visitamos que quedó en mi memoria?,Nostálgicas,1,Sitios significativos compartidos.
+¿Qué sueño abandoné que debería retomar?,Profundas/Románticas,2,Intuición de aspiraciones ocultas.
+¿Qué lugar secreto imaginas para una escapada romántica?,Hipotéticas/Imaginativas,3,Imaginación + romanticismo.
+"El ""lenguaje del amor"" que siento que más necesito de ti últimamente es ...",Profundas/Románticas,2,Necesidades emocionales actuales.
+¿Qué olor me hace sonreír siempre?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué canción me dedicaste?,Nostálgicas,2,Gestos románticos musicales.
+¿Qué palabra necesito oír en mis días oscuros?,Profundas/Románticas,1,Soporte emocional básico.
+¿Qué comida usarías en una cena erótica improvisada?,Intimas/Picantes,2,Sensualidad y creatividad.
+El pequeño sacrificio hago por ti regularmente que quizás no notes pienso que es...,Profundas/Románticas,2,Actos de amor no verbalizados.
+¿Qué palabra uso en exceso en mis mensajes?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué foto nuestra es mi favorita?,Nostálgicas,2,Memoria visual específica.
+¿Qué defensa emocional debería bajar?,Profundas/Románticas,3,Autoconocimiento conyugal.
+¿Qué parte de mi cuerpo te gustaría besar primero en la mañana?,Intimas/Picantes,1,Intimidad natural.
+¿Qué promesa nunca escrita es sagrada para nosotros?,Profundas/Románticas,1,Acuerdo tácito fundamental.
+¿Qué tradición romántica nos gustaría crear juntos?,Hipotéticas/Imaginativas,2,Futuro sentimental.
+¿Cuál es la conversación más profunda que hemos tenido que aún resuena en mí?,Profundas/Románticas,2,Impacto de la comunicación íntima.
+¿Qué sorpresa me organizaste que más me gustó?,Nostálgicas,1,Gestos memorables positivos.
+¿Qué parte de tu infancia quiero proteger?,Profundas/Románticas,3,Empatía generacional.
+¿Qué mensaje escribirías en una carta de amor anónima dirigida a mí?,Profundas/Románticas,3,Expresión sincera.
+¿De qué forma no verbal te demuestro mi amor más frecuentemente?,Profundas/Románticas,1,Gestos cotidianos de afecto.
+¿Qué invento absurdo me encantaría que existiera?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué momento me hizo reír tanto que lloré?,Nostálgicas,2,Situaciones hilarantes compartidas.
+¿Qué silencio nuestro tiene o tuvo mayor significado?,Profundas/Románticas,2,Comunicación no verbal profunda.
+¿Qué gesto inesperado me haría llorar de emoción?,Profundas/Románticas,2,Conexión emocional profunda.
+Gracias a estar contigo aprendi de mi mismo/a que ...,Profundas/Románticas,2,Autoconocimiento a través de la relación.
+¿Qué conversación cambió nuestra relación para siempre?,Nostálgicas,3,Momentos de inflexión comunicativa.
+¿A qué renuncie que valió la pena por nosotros?,Profundas/Románticas,3,Sacrificios no reconocidos.
+¿Qué experiencia nueva quieres vivir conmigo en la intimidad?,Intimas/Picantes,3,Confianza y exploración.
+"Mi ""lugar feliz"" emocional al que voy cuando necesito consueloes ....",Profundas/Románticas,3,Necesidades emocionales profundas.
+¿Qué película infantil me sé de memoria?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué talento o pasión mía crees que no he explorado lo suficiente?,Profundas/Románticas,2,Apoyo a aspiraciones personales.
+¿En qué fecha exacta nos dimos el primer beso?,Nostálgicas,3,Detalles específicos románticos.
+"Si hiciera una cita tematica, el tema seria....",Hipotéticas/Imaginativas,2,Creatividad + diversión.
+Si tuviera que definir nuestra relacion con una sola palabra seria...,Profundas/Románticas,1,Concepto de seguridad y pertenencia.
+¿Qué broma me hiciste que todavía no te perdono?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué ciudad elegirías para nuestra próxima gran aventura juntos?,Hipotéticas/Imaginativas,1,Deberías saberlo.
+"Si la vida nos diera un ""borrón y cuenta nueva"" en algún aspecto de nuestra relación, yo cambiarioa...",Profundas/Románticas,3,Reflexión honesta y potencialmente dolorosa.
+¿Qué frase uso siempre que quiero evitar una discusión?,Rompehielos/Divertidas,1,Deberías saberlo por observación o convivencia.
+¿Qué apodo cariñoso usabas que ya no usas?,Nostálgicas,1,Evolución del lenguaje amoroso.
+¿Qué problema mundial resolveríamos primero?,Hipotéticas/Imaginativas,3,Priorización de valores compartidos.
+¿Qué me regalaste hecho por ti mismo/a?,Nostálgicas,2,Gestos artesanales del pasado.
+Si intercambiáramos trabajos por un día yo aprenderia ...,Hipotéticas/Imaginativas,2,Conocimiento de rutinas laborales.
+¿Qué celebridad usarías para describirme físicamente?,Rompehielos/Divertidas,1,Comparación visual simple.
+¿Qué secreto mío te conté que te sorprendió más?,Nostálgicas,3,Revelaciones impactantes.
+¿Qué película de terror viviríamos juntos?,Hipotéticas/Imaginativas,1,Gustos cinematográficos.
+"Si tuviéramos que escribir un libro juntos, ¿de qué género sería y sobre qué trataría?",Hipotéticas/Imaginativas,2,Intereses compartidos y creatividad.
+¿Qué actividad nueva probamos juntos por primera vez?,Nostálgicas,1,Experiencias pioneras compartidas.
+¿Qué nombre le pondríamos a nuestro yate si fuéramos millonarios?,Hipotéticas/Imaginativas,1,Humor y aspiraciones compartidas.
+¿Qué apocalipsis sobreviviríamos mejor?,Hipotéticas/Imaginativas,2,Habilidades complementarias.
+¿Qué canción usarías como banda sonora para nuestra vida juntos?,Hipotéticas/Imaginativas,1,Identificación musical.
+¿Qué haría si supiera que me quedan 6 meses de vida?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué logro personal me llena más de orgullo?,Profundas/Románticas,2,Autoestima y valores personales.
+¿Qué tema TED daríamos juntos?,Hipotéticas/Imaginativas,3,Identificación de conocimiento único.
+¿Qué valor crees que fortalece nuestra relación más que cualquier otro?,Profundas/Románticas,2,Comprensión ética.
+¿De qué tema nunca me cansaría de hablar contigo?,Profundas/Románticas,1,Pasiones conversacionales.
+¿Qué habilidad emocional crees que necesito mejorar?,Profundas/Románticas,3,Crecimiento personal.
+"Si pudiéramos tener una cena con cualquier personaje histórico o ficticio (uno cada uno), ¿a quiénes elegiríamos y por qué?",Hipotéticas/Imaginativas,3,Intereses intelectuales y valores.
+¿Qué me gustaría escuchar de ti más seguido?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué creencia mía ha cambiado desde que estamos juntos?,Profundas/Románticas,3,Evolución personal profunda.
+¿Qué color describe cómo te sientes hoy en la relación?,Hipotéticas/Imaginativas,2,Emociones abstractas.
+¿Qué tipo de criaturas míticas seríamos si viviéramos en un mundo de fantasía?,Hipotéticas/Imaginativas,2,Autopercepción y arquetipos.
+¿Qué hábito cambié desde que estamos juntos?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué parte de mi pasado me cuesta más compartir?,Profundas/Románticas,3,Vulnerabilidades ocultas.
+¿Qué estilo arquitectónico tendría nuestra casa soñada?,Hipotéticas/Imaginativas,2,Gustos estéticos compartidos.
+¿Qué animal soy cuando estoy molesto/a?,Rompehielos/Divertidas,2,Percepción emocional humorística.
+"Si nuestra vida amorosa fuera una receta, ¿cuáles serían los ingredientes principales y el ""toque secreto""?",Hipotéticas/Imaginativas,3,Metáfora creativa y análisis de la relación.
+La situacion que mas me ha puesto en conflicto con mis propios valores fue...,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué lugar te gustaría que visitáramos juntos por primera vez?,Hipotéticas/Imaginativas,1,Deberías saberlo.
+¿Qué pregunta debería hacerte más seguido?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+Lo que mas ansiedad me provoca de nuestra relacion es ...,Profundas/Románticas,3,Inseguridades relacionales honestas.
+Algo que probaria sexualmente hablando solo contigo es...,Intimas/Picantes,3,Confesión de fantasía específica.
+"Si tuviéramos que diseñar una atracción de parque temático basada en nuestra relación, ¿cómo sería?",Hipotéticas/Imaginativas,3,Creatividad y simbolismo lúdico.
+¿Qué parte de tu forma de amar me da más seguridad?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué sueño tengo que creo que no entiendes?,Profundas/Románticas,2,Aspiraciones incomprendidas.
+¿Qué parte de tu cuerpo descubrí tarde que me excita?,Intimas/Picantes,2,Exploración física progresiva.
+¿Qué experiencia de infancia mía te gustaría haber vivido conmigo?,Nostálgicas,3,Empatía histórica.
+El momento en que me suelo sentir mas conectado/a contigo es...,Profundas/Románticas,2,Intimidad emocional específica.
+¿Qué lugar prohibido me genera morbo?,Intimas/Picantes,3,Tabú social + riesgo.
+¿Qué frase usarías para resumir tu vida en tres palabras?,Profundas/Románticas,2,Autoanálisis condensado.
+"Si tuviéramos que huir y cambiar de identidad, ¿qué nuevos nombres elegiríamos?",Hipotéticas/Imaginativas,2,Fantasía de escape y reinvención.
+¿Qué parte de mi cuerpo me costó aceptar?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+Un sacrificio que hice por nuestra relacion sin decirtelo fue...,Profundas/Románticas,3,Gestos silenciosos significativos.
+¿Qué comida asocias con nuestros momentos más felices?,Nostálgicas,1,Memoria sensorial.
+¿Qué objeto de nuestra casa vendería primero si necesitáramos dinero urgente?,Hipotéticas/Imaginativas,2,Prioridades y desapego material.
+¿Qué tipo de conversación me vuelve inseguro/a?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué parte de mi personalidad me gustaría cambiar?,Profundas/Románticas,2,Autocrítica constructiva.
+¿Qué animal soy cuando estoy feliz?,Rompehielos/Divertidas,2,Caracterización emocional.
+"Si tuviéramos un talk show juntos, ¿quién sería el presentador principal y quién el co-conductor cómico?",Hipotéticas/Imaginativas,1,Dinámica de roles y humor.
+¿Qué me hace sentir juzgado por los demás?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+Lo qué me falta vivir para sentirme completo/a es ...,Profundas/Románticas,3,Necesidades existenciales profundas.
+¿Qué prenda interior elegirías para mí en una cita especial?,Intimas/Picantes,1,Preferencias visuales conocidas.
+"¿Qué es lo más ""atrevido"" que hemos hecho en público (o que me gustaría hacer)?",Intimas/Picantes,2,Límites y fantasías de exhibicionismo leve.
+¿Qué palabra o frase tuya me tranquiliza siempre?,Profundas/Románticas,1,Poder sanador del lenguaje.
+¿Qué hora del día prefiero para la intimidad?,Intimas/Picantes,2,Ritmos corporales observables.
+¿Qué canción escucharías si estuvieras pensando en mí?,Hipotéticas/Imaginativas,2,Conexión emocional musical.
+¿Qué parte de mi infancia no me gusta recordar?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué aspecto de nuestro futuro me emociona más?,Profundas/Románticas,2,Esperanzas compartidas específicas.
+¿Qué palabra usaría para definirme en esta etapa de mi vida?,Profundas/Románticas,2,Introspección madura.
+"Si tuvieras que describirme en la cama con tres adjetivos, ¿cuáles serían?",Intimas/Picantes,1,Autopercepción y feedback directo.
+Algo que me hizo cambiar mi opinion sobre el amor fue...,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué me hace sentir más amado/a: palabras o acciones?,Profundas/Románticas,1,Lenguajes del amor preferidos.
+¿Qué parte de tu cuerpo es mi favorita para besar (que no sea la boca)?,Intimas/Picantes,1,Preferencia física específica.
+¿Qué opinión tengo sobre la fidelidad emocional?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué momento difícil nuestro me hizo valorarte más?,Profundas/Románticas,3,Crecimiento a través de crisis.
+¿Qué sonido hago solo en intimidad profunda?,Intimas/Picantes,2,Observación auditiva íntima.
+¿Qué animal soy cuando estoy cansado/a?,Rompehielos/Divertidas,1,Deberías saberlo.
+¿Cuál es el escenario más exótico o inusual donde me gustaría tener intimidad contigo?,Intimas/Picantes,3,Fantasía elaborada y aventurera.
+¿Qué me da más miedo: el fracaso o no intentarlo?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué parte de mi historia familiar más te ha marcado?,Profundas/Románticas,2,Influencias transgeneracionales.
+¿Qué adjetivo usarías para nuestro estilo íntimo?,Intimas/Picantes,2,Autopercepción compartida.
+¿Qué frase usarías para describir cómo nos conocimos desde tu perspectiva?,Nostálgicas,2,Memoria subjetiva.
+¿Qué tipo de lencería o ropa interior mía te parece irresistible (o te gustaría que usara)?,Intimas/Picantes,1,Preferencias visuales.
+¿Qué necesito escuchar de ti cuando estoy triste?,Profundas/Románticas,2,Estrategias de consuelo específicas.
+¿Qué límite nunca cruzaríamos?,Intimas/Picantes,3,Negociación implícita de fronteras.
+¿Qué experiencia de vida compartida te gustaría repetir exactamente igual?,Nostálgicas,1,Momento inolvidable.
+"Un fetiche o ""kink"" leve que tengo y que creo podria explorar contigo es ...",Intimas/Picantes,3,Apertura a la exploración y tabúes leves.
+¿Qué discusión entre nosotros me cambió la forma de pensar?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué tradición quiero crear para nosotros?,Profundas/Románticas,2,Visión de rituales futuros.
+¿Qué lugar visitarías si pudieras conocer cualquier cultura del mundo?,Hipotéticas/Imaginativas,3,Interés cultural profundo.
+¿Cuál es el gesto o caricia no sexual que más me excita o me prepara para la intimidad?,Intimas/Picantes,2,Conocimiento de la antesala erótica.
+¿Qué cosa no soporto en una discusión?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué me daría más miedo perder en la vida?,Profundas/Románticas,3,Vulnerabilidades existenciales.
+Mi peor miedo en nuestra relacion es...,Profundas/Románticas,3,Vulnerabilidad emocional.
+"Si nuestra vida sexual fuera una película, ¿qué género sería (comedia romántica, drama erótico, aventura...)?",Intimas/Picantes,2,Autoconciencia y humor sobre la dinámica sexual.
+¿Qué tipo de humor me molesta aunque finja reír?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿De qué manera me has cambiado sin que me diera cuenta en un primer momento?,Profundas/Románticas,3,Transformación inconsciente mutua.
+¿Qué juego previo nunca falla?,Intimas/Picantes,1,Rutinas íntimas conocidas.
+¿Qué canción asocias con nosotros que nadie más entendería?,Nostálgicas,2,Referencia personal única.
+"¿Qué ""palabra clave"" o señal secreta podríamos usar en público para indicar que queremos intimidad más tarde?",Intimas/Picantes,2,Complicidad y comunicación no verbal.
+¿Qué momento íntimo no sexual atesoro más?,Profundas/Románticas,2,Intimidad emocional pura.
+Mi mayor inseguridad en la intimidad es...,Intimas/Picantes,3,Vulnerabilidad y confianza.
+¿Qué historia mía me da vergüenza contar?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué lección de vida me has enseñado?,Profundas/Románticas,2,Crecimiento personal mutuo.
+"¿Qué comida o bebida considero afrodisíaca o me pone en ""modo romántico""?",Intimas/Picantes,1,Asociaciones personales.
+¿Qué es algo que siempre quise hacer pero nunca me animé?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+"Si tuviéramos que sobrevivir en el espacio, ¿qué rol tendría cada uno?",Hipotéticas/Imaginativas,3,Dinámicas de supervivencia creativas.
+Si grabaramos un podcast ¿de qué sería?,Hipotéticas/Imaginativas,2,Temas de interés mutuo.
+¿Qué animal soy cuando estoy aburrido/a?,Rompehielos/Divertidas,1,Deberías saberlo.
+¿Qué recuerdo íntimo nuestro me hace sonrojar de placer con solo pensarlo?,Intimas/Picantes,2,Memoria erótica significativa.
+¿Qué tema evitamos porque nos incomoda a ambos?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué reality show seríamos perfectos para participar juntos?,Hipotéticas/Imaginativas,2,Análisis de dinámicas de pareja.
+¿Qué lugar te gustaría que visitáramos juntos por segunda vez?,Hipotéticas/Imaginativas,1,Deberías saberlo.
+¿Qué nombre artístico tendríamos como dúo musical?,Hipotéticas/Imaginativas,2,Creatividad + identidad compartida.
+¿Qué es lo más vergonzoso o gracioso que nos ha pasado durante un momento íntimo?,Intimas/Picantes,1,Humor y superación de la vergüenza.
+¿Qué tradición inventaríamos para nuestros futuros nietos?,Hipotéticas/Imaginativas,3,Legado imaginativo.
+¿Qué canción asocias con nuestras peleas más intensas?,Nostálgicas,3,Memoria emocional.
+¿Qué secreto me hubiera costado contarte al principio?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+Si pudiera aprender instantáneamente cualquier idiomal sería ...,Rompehielos/Divertidas,2,Aspiraciones e intereses culturales.
+¿Qué película me marcó emocionalmente y por qué?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+"¿Qué mascota imposible tendríamos (dragón, unicornio, etc.)?",Hipotéticas/Imaginativas,2,Fantasías de compañía mágica.
+¿Qué palabra resume mi visión de pareja?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+"Si pudiéramos leer mentes por un día, ¿de quién sería la primera que leeríamos?",Hipotéticas/Imaginativas,3,Curiosidad específica sobre terceros.
+¿Qué animal soy cuando estoy enamorado/a?,Rompehielos/Divertidas,1,Deberías saberlo.
+"¿Qué pequeña manía mía te parece adorable o, al menos, soportable?",Rompehielos/Divertidas,1,Conocimiento de peculiaridades.
+¿Qué realidad alterna nos tentaría?,Hipotéticas/Imaginativas,3,Arrepentimientos no confesados.
+"Si fuera un sabor, ¿cuál sería y por qué?",Rompehielos/Divertidas,2,Autopercepción sensorial y creativa.
+¿Cuál es mi recuerdo más feliz de la adolescencia?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué trabajo haríamos en un circo?,Hipotéticas/Imaginativas,2,Talentos circenses imaginarios.
+¿Qué objeto cotidiano sexualizaríamos?,Intimas/Picantes,2,Creatividad erótica cotidiana.
+Algo que sólo te he contado a ti es ...,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué secreto mío descubriste por accidente?,Profundas/Románticas,3,Vulnerabilidad involuntaria.
+¿Cual es nuestra reconciliación más significativa?,Nostálgicas,2,Conexión emocional recuperada.
+¿Qué cosa hago que siempre delata cuando estoy mintiendo (aunque sea una mentira piadosa)?,Rompehielos/Divertidas,1,Tells observables.
+¿Qué tipo de fantasmas seríamos después de morir?,Hipotéticas/Imaginativas,3,Personalidad post-mortem humorística.
+"Si me dieran tres deseos (sin trampas), ¿cuáles pediría?",Rompehielos/Divertidas,3,Prioridades profundas y algo de imaginación.
+¿Qué es algo que me cuesta perdonar?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+"Si intercambiáramos personalidades por una semana, ¿qué haría yo con la tuya?",Hipotéticas/Imaginativas,3,Comprensión profunda de diferencias.
+¿Qué elogio tuyo guardo como tesoro?,Profundas/Románticas,1,Validación emocional significativa.
+¿Cuál es el recuerdo más antiguo que tengo de nuestra relación que aún atesoro?,Nostálgicas,2,Memoria selectiva y valor sentimental.
+¿Qué cicatriz emocional respetas sin preguntar?,Profundas/Románticas,3,Límites emocionales tácitos.
+¿Qué animal soy cuando estoy emocionado/a?,Rompehielos/Divertidas,1,Deberías saberlo.
+¿Qué es algo que quiero experimentar en la vida antes de morir?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué poder mágico elegiría para ayudarte en tu día a día?,Hipotéticas/Imaginativas,3,Altruismo mágico específico.
+¿Qué canción me hace llorar en secreto?,Profundas/Románticas,2,Sensibilidades musicales ocultas.
+¿Cuál es el piropo o cumplido más memorable que me has dado?,Nostálgicas,1,Impacto de palabras afectuosas.
+¿Qué tipo de zombies seríamos en el apocalipsis?,Hipotéticas/Imaginativas,2,Humor negro sobre transformación.
+¿Qué lección de vida me diste sin palabras?,Profundas/Románticas,2,Impacto conductual inconsciente.
+¿Qué objeto pequeño simboliza un gran momento o etapa de nuestra relación para mí?,Nostálgicas,3,Significado profundo en lo cotidiano.
+¿Qué mensaje dejaríamos en una botella al mar?,Hipotéticas/Imaginativas,2,Comunicación romántica hipotética.
+Una pregunta que evito por miedo a tu respuesta es...,Profundas/Románticas,3,Inseguridades no verbalizadas.
+¿Qué canción asocias con nuestros mejores días juntos?,Nostálgicas,1,Deberías saberlo.
+"Si fuéramos plantas, ¿qué tipo seríamos?",Hipotéticas/Imaginativas,3,Metáfora botánica de relación.
+¿Qué gesto de ternura robé de ti?,Profundas/Románticas,1,Adopción inconsciente de hábitos.
+¿Qué objeto usarías para describir cómo me ves en el futuro?,Hipotéticas/Imaginativas,3,Proyección simbólica.
+¿Qué tradición que teníamos al principio de la relación extraño y me gustaría retomar?,Nostálgicas,2,Anhelo por rituales pasados.
+¿Qué tipo de dinosaurios habríamos sido?,Hipotéticas/Imaginativas,2,Personalidad prehistórica.
+¿Qué parte de tu personalidad admiré antes de amarte?,Profundas/Románticas,2,Reconocimiento de esencia.
+¿Cuál fue la discusión más tonta que tuvimos que luego nos hizo reír mucho?,Nostálgicas,1,Humor sobre conflictos menores.
+¿Qué crimen del siglo pasado resolveríamos como detectives?,Hipotéticas/Imaginativas,3,Trabajo en equipo investigativo.
+¿Qué recuerdo familiar compartirías con nuestro hijo hipotético?,Nostálgicas,3,Legado emocional selectivo.
+¿Qué foto nuestra antigua me da más ternura o nostalgia?,Nostálgicas,2,Conexión emocional con el pasado visual.
+¿Qué canción de nuestra adolescencia nos uniría?,Nostálgicas,2,Memoria generacional compartida.
+¿Qué crees que es lo más valiente que he hecho por amor (por ti o por la relación)?,Profundas/Románticas,2,Reconocimiento de esfuerzo y compromiso.
+¿Qué frase tuya me da paz cuando estoy mal?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿Qué objeto perdido de nuestra historia recuperarías?,Nostálgicas,3,Valor simbólico oculto.
+¿Qué frase usarías para describir cómo te ves en 5 años conmigo?,Profundas/Románticas,3,Visión conjunta del futuro.
+"Si describieras mi alma con un color, ¿cuál sería y por qué?",Profundas/Románticas,3,Intuición y percepción extrasensorial de la pareja.
+"Si pudiéramos fusionarnos en una persona, ¿cómo sería?",Hipotéticas/Imaginativas,3,Síntesis total de personalidades.
+"¿Qué error repetimos que ya es nuestro ""clásico""?",Nostálgicas,1,Patrones recurrentes evidentes.
+El gesto tuyo que me hace sentir completamente seguro/a es...,Profundas/Románticas,1,Impacto de acciones sutiles.
+El gesto tuyo que me hace sentir completamente excitado/a es...,Nostálgicas,3,Definición emocional profunda.
+¿Cuál es mi mayor sueño no material que espero cumplir contigo a mi lado?,Profundas/Románticas,2,Aspiraciones compartidas y apoyo.
+¿Qué primera vez nuestra fue mejor de lo planeado?,Nostálgicas,2,Expectativas superadas.
+¿Qué canción describe perfectamente cómo me siento por ti en este momento de nuestras vidas?,Profundas/Románticas,2,Conexión emocional con la música.
+¿Qué malentendido inicial hoy nos causa risa?,Nostálgicas,1,Superación de conflictos tempranos.
+¿Qué es aquello que nunca me canso de escuchar de ti?,Profundas/Románticas,1,Necesidad de afirmación o palabras específicas.
+¿Qué tradición ajena adoptamos como propia?,Nostálgicas,2,Apropiación cultural de pareja.
+¿Qué aspecto de nuestra relación me enorgullece?,Rompehielos/Divertidas,2,Requiere conocimiento íntimo o conversaciones pasadas.
+¿En qué parte de mi cuerpo me gusta más que me toques?,Intimas/Picantes,1,Preferencias táctiles básicas conocidas.
+"¿Qué ""señal del universo"" ignoramos al conocernos?",Nostálgicas,3,Reinterpretación del destino.
+"Si pudiera regalarte una cualidad mía, te daria...",Profundas/Románticas,2,Autoconocimiento y generosidad.
+¿Qué aroma o perfume mío te excita más?,Intimas/Picantes,1,Atracción olfativa específica.
+¿Qué canción prohibirías en nuestra historia?,Nostálgicas,1,Asociaciones negativas evidentes.
+¿Qué canción sería el soundtrack de nuestra noche más salvaje?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿En qué momento del día estoy más receptivo/a a caricias?,Intimas/Picantes,2,Patrones de disponibilidad sensual.
+¿Qué situación me haría perder el control contigo en público?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué tipo de música prefiero durante la intimidad?,Intimas/Picantes,2,Ambiente sonoro íntimo preferido.
+¿Qué te pediría hacer si esta fuera nuestra última noche juntos?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué parte de tu cuerpo me gusta acariciar más?,Intimas/Picantes,1,Preferencias de tacto hacia pareja.
+¿Qué tipo de casa construiríamos en Marte si fuéramos los primeros colonos?,Hipotéticas/Imaginativas,2,Visión de futuro y adaptación creativa.
+¿Qué parte de nuestro pasado sexual debería repetirse más seguido?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué me pone nervioso/a pero excitado/a a la vez?,Intimas/Picantes,3,Tensión erótica específica compleja.
+¿Qué manía odias de mi familia?,Rompehielos/Divertidas,3,Crítica social delicada.
+"Si pudiéramos intercambiar una habilidad por un día, ¿cuál habilidad tuya tomaría yo y cuál mía te daría?",Hipotéticas/Imaginativas,1,Curiosidad y apreciación de talentos.
+¿Qué haría si descubriera que tú tienes una fantasía con otra pareja?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué posición para dormir juntos prefiero?,Intimas/Picantes,1,Intimidad nocturna de contacto.
+"¿Qué personaje de libro o película crees que se enamoraría perdidamente de mí (y yo de él/ella, platónicamente)?",Hipotéticas/Imaginativas,2,Análisis de personalidad y arquetipos.
+¿Qué tipo de caricias me relajan más?,Intimas/Picantes,2,Técnicas de relajación sensual.
+¿Qué parte de ti me provoca aunque estés vestido/a?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿En qué lugar de la casa me gusta más ser romántico/a?,Intimas/Picantes,2,Geografía doméstica del romance.
+¿Qué parte de mi cuerpo te pediría que tocaras más (y no siempre lo digo)?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué me excita más: las sorpresas o la anticipación?,Intimas/Picantes,2,Psicología del deseo personal.
+¿Cuál es mi forma favorita de que me seduzcas sin que sea demasiado obvio?,Intimas/Picantes,2,Aprecio por la sutileza y el juego previo.
+¿Qué gesto pequeño tuyo me enciende inmediatamente?,Intimas/Picantes,1,Triggers de atracción específicos.
+"¿Qué apodo cariñoso o ""sucio"" me gusta que uses solo en la intimidad?",Intimas/Picantes,1,Complicidad y lenguaje privado.
+¿Qué juego íntimo crearía para una noche sin reglas?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué actividad no sexual hacemos que me resulta sensual?,Intimas/Picantes,2,Erotismo en lo cotidiano.
+"Si tuvieras que planear una noche de fantasía para mí, ¿cuál sería el tema principal?",Intimas/Picantes,3,Conocimiento de deseos ocultos y creatividad erótica.
+¿Qué tipo de besos prefiero: suaves o intensos?,Intimas/Picantes,1,Preferencias de contacto labial.
+"¿Qué parte de mi cuerpo considero mi ""arma secreta"" de seducción?",Intimas/Picantes,1,Autoconfianza y percepción corporal.
+Si tuviera una semana sin tabúes sexuales te diria....,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+El momento en que me siento más vulnerable contigo es ...,Intimas/Picantes,3,Apertura emocional en intimidad.
+¿Qué virtud tuya envidio silenciosamente?,Profundas/Románticas,2,Admiración no expresada.
+¿Hay alguna postura o práctica sexual que crees que me da curiosidad pero no me he atrevido a sugerir?,Intimas/Picantes,3,Intuición sobre deseos no expresados.
+¿Qué disfraz provocador me encantaría que usaras?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué parte de nuestra intimidad me da más confianza?,Intimas/Picantes,2,Seguridad en la conexión física.
+Un miedo que comparto contigo es...,Profundas/Románticas,3,Solidaridad emocional secreta.
+¿Qué tipo de masaje me relaja más y me pone en un estado más receptivo?,Intimas/Picantes,2,Conocimiento de preferencias táctiles.
+¿Qué fantasía sexual me da más curiosidad?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué me gusta más: que me acaricies el cabello o la espalda?,Intimas/Picantes,1,Preferencias específicas de caricias.
+¿Qué sueño común pospusimos por miedo?,Profundas/Románticas,2,Inseguridades compartidas.
+¿Qué canción me gustaría bailar contigo de forma muy sensual y privada?,Intimas/Picantes,1,Conexión física y musical.
+¿Qué parte de mi cuerpo protejo por inseguridad?,Profundas/Románticas,3,Vulnerabilidad física.
+"Si pudieras describirme con un sabor, ¿cuál sería?",Rompehielos/Divertidas,2,Requiere creatividad y asociar personalidad con sensaciones.
+¿Qué ritual tenemos antes de la “intimidad”?,Intimas/Picantes,2,Patrones de preparación sensual.
+Una verdad incomoda que suelo evitar es...,Profundas/Románticas,3,Tabu conversacional.
+"¿Cuál es el ""tic"" nervioso más evidente que tengo?",Rompehielos/Divertidas,1,Observación de comportamiento.
+¿Qué gesto de amor reconozco pero no agradezco suficiente?,Profundas/Románticas,1,Descortesía inconsciente.
+¿Qué me gusta más hacer en la ducha contigo?,Intimas/Picantes,2,Intimidad acuática específica.
+¿En qué me fijo más cuando me miras con deseo?,Intimas/Picantes,2,Percepción de la mirada erótica.
+¿Qué versión de mí solo existe contigo?,Profundas/Románticas,3,Identidad relacional exclusiva.
+"¿Cuál es el ""crimen"" culinario que cometo con más frecuencia (ej: piña en la pizza, ketchup en sitios raros)?",Rompehielos/Divertidas,1,Hábitos alimenticios peculiares.
+¿Qué tipo de contacto visual prefiero durante la intimidad?,Intimas/Picantes,3,Comunicación no verbal íntima.
+"¿Qué recuerdo de nuestra ""primera pelea tonta"" me hace sonreír ahora?",Nostálgicas,1,Perspectiva y humor sobre el pasado.
+¿Qué me excita más de tu personalidad en la intimidad?,Intimas/Picantes,3,Atracción psicológica específica.
+"¿Cuál fue el primer secreto ""importante"" que te confié?",Nostálgicas,2,Memoria de momentos de vulnerabilidad.
+¿Qué me gusta susurrarte al oído?,Intimas/Picantes,2,Comunicación íntima específica.
+¿Cuándo me siento más sexy contigo?,Intimas/Picantes,2,Momentos de máxima confianza sensual.
+"¿Qué canción que no es ""nuestra canción oficial"" me recuerda poderosamente a nosotros?",Nostálgicas,2,Asociaciones musicales personales.
+¿En qué lugar público tendría sexo sin pensarlo dos veces?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué actividad compartida me resulta más afrodisíaca?,Intimas/Picantes,3,Actividades que llevan a la intimidad.
+"Si pudiera escribir una carta a mi ""yo"" del pasado justo antes de conocerte, ¿qué advertencia o consejo le daría sobre nosotros?",Profundas/Románticas,3,Reflexión profunda sobre la relación y autoconocimiento.
+"¿Cuál es la ""chispa"" que siento que nunca debemos perder como pareja?",Profundas/Románticas,1,Elemento vital de la relación.
+¿Qué me gusta más que hagas cuando me abrazas?,Intimas/Picantes,1,Técnicas específicas de abrazo.
+¿En qué situación me has visto más feliz y pleno/a gracias a nuestra relación?,Profundas/Románticas,2,Observación del impacto emocional.
+¿En qué consiste mi tipo de seducción favorita?,Intimas/Picantes,3,Estrategias personales de conquista.
+Un tema íntimo que me gustaría tratar contigo y nunca encuentro el momento es....,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué sonido hago que más te gusta?,Intimas/Picantes,2,Expresiones vocales íntimas específicas.
+"Si tuviéramos que sobrevivir a un apocalipsis zombie, ¿cuál sería mi rol principal en nuestro equipo de supervivencia?",Hipotéticas/Imaginativas,1,Autoevaluación de habilidades prácticas o de liderazgo.
+¿Qué accesorios colecciono sin necesidad real?,Rompehielos/Divertidas,2,Hábitos de compra específicos.
+¿Qué personaje de ficción crees que sería mi mejor amigo/a y por qué?,Hipotéticas/Imaginativas,2,Análisis de personalidad y afinidades.
+¿Qué notificación del celular siempre ignoro?,Rompehielos/Divertidas,2,Patrones digitales de evitación.
+"Si me dieran la oportunidad de diseñar una nueva festividad global, ¿qué celebraría y cómo se llamaría?",Hipotéticas/Imaginativas,3,Creatividad y valores universales.
+¿Qué tipo de masaje secreto me gustaría que me hicieras en público?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué palabra uso incorrectamente pero nadie me corrige?,Rompehielos/Divertidas,2,Errores lingüísticos persistentes.
+"¿Qué ""posición"" o dinámica en el juego previo es mi favorita indiscutible?",Intimas/Picantes,2,Conocimiento específico de preferencias.
+¿Qué parte de tus caricias me vuelve adicto/a?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué hago primero cuando llego a un lugar nuevo?,Rompehielos/Divertidas,2,Patrones de exploración espacial.
+Una fantasía tuya que secretamente me gustaría que me propusieras es...,Intimas/Picantes,3,Deseos ocultos y anticipación.
+¿Qué parte de nuestra sexualidad me gustaría reinventar contigo?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué tipo de contenido veo en redes sociales a escondidas?,Rompehielos/Divertidas,3,Consumo digital secreto.
+"¿Qué tipo de ""ambiente"" (luces, música, olores) me ayuda a entrar más en el mood íntimo?",Intimas/Picantes,1,Preferencias sensoriales conocidas.
+¿Qué habilidad física he perdido con la edad?,Rompehielos/Divertidas,2,Cambios corporales temporales.
+¿Qué fantasía pública nunca confesé?,Intimas/Picantes,3,Tabú social.
+"¿Qué ""sabor"" (literal o metafórico) me gusta más encontrar en tus besos?",Intimas/Picantes,2,Sensibilidad y metáforas íntimas.
+¿Qué tipo de beso me enciende sin importar dónde estemos?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué tipo de ejercicio odio hacer?,Rompehielos/Divertidas,1,Preferencias de actividad física.
+¿Qué sonido tuyo excita mi imaginación?,Intimas/Picantes,2,Memoria auditiva sensual.
+"Si tuviéramos que crear un código secreto para hablar de sexo delante de otros, ¿cuáles serían nuestras palabras clave?",Intimas/Picantes,2,Complicidad y humor.
+¿Qué prohibición cultural desafiaríamos?,Intimas/Picantes,3,Transgresión social.
+"¿Cuál es mi ""límite"" o algo que definitivamente no me gustaría probar en la intimidad?",Intimas/Picantes,3,Conocimiento de barreras y respeto.
+¿Qué parte del cuerpo me gustaría tatuarme en tu honor?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué tipo de clima me pone de mejor humor?,Rompehielos/Divertidas,1,Influencia meteorológica emocional.
+"Si tuvieras que escribir un ""manual de instrucciones"" para hacerme feliz, ¿cuál sería el primer capítulo?",Profundas/Románticas,2,Comprensión profunda de necesidades.
+¿Qué imagen de ti me hace sonreír aunque esté solo/a?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué actividad me da más pereza los fines de semana?,Rompehielos/Divertidas,1,Resistencias específicas de ocio.
+"¿Qué ""locura"" por amor he hecho que más te ha sorprendido o divertido?",Nostálgicas,1,Recuerdos de gestos audaces.
+Algo que cambiaria de nuestra rutina sexual es...,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué programa de TV infantil aún me gusta?,Rompehielos/Divertidas,2,Nostalgia específica audiovisual.
+¿Qué premisa de película porno parodiaríamos?,Intimas/Picantes,3,Humor sexual complejo.
+¿Qué tipo de zapatos uso más frecuentemente?,Rompehielos/Divertidas,1,Preferencias de calzado habituales.
+¿Qué momento histórico repetiríamos en la intimidad?,Intimas/Picantes,3,Fantasía contextualizada.
+¿Qué me gusta comer cuando estoy enfermo/a?,Rompehielos/Divertidas,1,Comida de confort específica.
+¿Qué habilidad social mía crees que es la más fuerte (o la más débil)?,Profundas/Románticas,1,Observación de interacciones.
+¿Qué inseguridad superé contigo en la intimidad?,Intimas/Picantes,3,Crecimiento sexual compartido.
+¿Qué actividad me ayuda más a concentrarme?,Rompehielos/Divertidas,2,Técnicas personales de focus.
+"¿Qué ""regla no escrita"" de nuestra convivencia es la más importante para mí?",Profundas/Románticas,1,Acuerdos tácitos fundamentales.
+¿Qué tipo de evento social me agota más?,Rompehielos/Divertidas,2,Límites de energía social.
+¿Qué límite sorprendente descubriste que tengo?,Intimas/Picantes,3,Exploración de fronteras.
+¿Cuál es la aventura más ridícula que me gustaría vivir contigo antes de hacernos viejos?,Hipotéticas/Imaginativas,3,Sueños locos y compañerismo.
+¿Qué objeto de casa nunca uso pero no regalo?,Rompehielos/Divertidas,2,Apego emocional a objetos inútiles.
+¿Qué es lo más inesperado que he hecho en la cama que te gustó mucho?,Intimas/Picantes,2,Sorpresas y conocimiento de reacciones.
+¿Qué fetiche me llama la atención pero me da pena admitirlo?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué me gusta hacer para evitar una conversación incómoda?,Rompehielos/Divertidas,3,Estrategias de evasión social.
+¿Qué tipo de humor me hace reír más fácilmente?,Rompehielos/Divertidas,1,Preferencias de comedia específicas.
+"Si me obligaran a elegir una sola comida para el resto de mi vida, ¿cuál sería (y cómo la prepararía)?",Rompehielos/Divertidas,1,Preferencia culinaria definitiva.
+¿Qué fantasía me daría más nervios realizar?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué actividad doméstica disfruto secretamente?,Rompehielos/Divertidas,3,Placeres ocultos del hogar.
+¿Cuál fue el momento exacto en que supiste que querías una relación seria conmigo?,Nostálgicas,3,Revelación personal importante.
+¿Qué parte de tu cuerpo me hace fantasear aunque finja no notarlo?,Rompehielos/Divertidas,3,"Creatividad, intimidad o apertura emocional y sexual."
+¿Qué me pone más ansioso/a: llegar tarde o llegar muy temprano?,Rompehielos/Divertidas,2,Patrones de ansiedad temporal.
+¿Qué detalle te hizo elegirme?,Nostálgicas,3,Revelación de atracción originaria.
+¿Qué cosa pequeña hago que secretamente te derrite el corazón?,Profundas/Románticas,1,Gestos sutiles con gran impacto.
