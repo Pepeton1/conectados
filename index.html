@@ -158,7 +158,7 @@
                     <div class="screen-content-wrapper">
                         <div id="player-choice-buttons-container" class="player-choice-button-grid"></div>
                     </div>
-                    <div id="all-questionnaires-completed-message-choice" class="text-center my-3 hidden"><p class="text-green-600 font-semibold text-lg">¡Todos los cuestionarios completados!</p><p class="text-green-600 font-semibold text-lg">--- Ahora si puedes proyecta tu telefono a una pantalla el juego sera mucho mejor ---</p></div>
+                    <div id="all-questionnaires-completed-message-choice" class="text-center my-3 hidden"><p class="text-green-600 font-semibold text-lg">¡Todos los cuestionarios completados!</p></div>
                     <div class="screen-actions-bottom">
                         <button id="start-game-from-choice-button" class="btn btn-success w-full hidden">¡Iniciar el Juego!</button>
                     </div>
@@ -200,10 +200,7 @@
                     <h2 class="text-2xl font-bold text-center text-blue-700 mb-4">¡Juego Terminado!</h2>
                     <div class="screen-content-wrapper max-h-[50vh]"> <div id="final-scores" class="mb-4"></div> </div>
                     <div id="winner-announcement" class="text-xl font-semibold text-center text-green-600 mb-4"></div>
-                    <div class="screen-actions-bottom w-full flex flex-col sm:flex-row gap-3">
-                        <button id="play-again-same-settings-button" class="btn btn-secondary w-full sm:w-1/2">Volver a jugar</button>
-                        <button id="play-again-button" class="btn btn-primary w-full sm:w-1/2">Nueva Partida</button>
-                    </div>
+                    <div class="screen-actions-bottom w-full"> <button id="play-again-button" class="btn btn-primary w-full">Jugar de Nuevo</button> </div>
                 </div>
 
                 <div id="message-modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 hidden flex items-center justify-center z-50 p-4">
@@ -225,10 +222,10 @@
                             <img src="images/logo-conectados.png" alt="Logo Conectados" class="screen-logo">
                             <h3 class="modal-title-large text-center leading-6 font-medium text-gray-900">Instrucciones de Conectados</h3>
                             <div id="instructions-modal-content" class="mt-4 px-2 py-3 text-sm text-gray-600">
-                                <p><strong>Objetivo:</strong> ¡Demostrar qué tan bien conoces a tu pareja y sumar la mayor cantidad de puntos!</p>
+                                <p><strong>Objetivo:</strong> ¡Demostrar qué tan bien conoces a tu pareja y sumar la mayor cantidad de puntos como equipo!</p>
                                 <h3>Preparación:</h3>
                                 <ul>
-                                    <li>Configura el número de parejas, turnos por jugador y el tiempo para adivinar.</li>
+                                    <li>Configura el número de parejas, turnos por jugador (preguntas del cuestionario) y el tiempo para adivinar.</li>
                                     <li>Cada pareja ingresa sus nombres y un nombre para el equipo.</li>
                                     <li>En secreto, cada jugador responde un cuestionario individual. ¡Estas serán las respuestas que su pareja intentará adivinar! Puedes cambiar hasta 3 preguntas de tu cuestionario si no te gustan.</li>
                                 </ul>
@@ -243,7 +240,7 @@
                                 </ul>
                                 <h3>Puntuación:</h3>
                                 <ul>
-                                    <li>Las preguntas tienen diferentes niveles de dificultad, que otorgan más o menos puntos.</li>
+                                    <li>Las preguntas tienen diferentes niveles de dificultad, que otorgan más puntos.</li>
                                     <li>La pareja con más puntos al final de todos los turnos gana.</li>
                                 </ul>
                                 <p><strong>¡Diviértanse y que gane la pareja más conectada!</strong></p>
@@ -285,9 +282,7 @@
         const nextQuestionButtonQuest = document.getElementById('next-question-button-quest');
         const swapsRemainingDisplay = document.getElementById('swaps-remaining-display');
         const currentCouplePlayingEl = document.getElementById('current-couple-playing'); const currentPlayerAnsweringGameLargeEl = document.getElementById('current-player-answering-game-large'); const partnerToGuessEl = document.getElementById('partner-to-guess'); const gameQuestionTextEl = document.getElementById('game-question-text'); const timerDisplayEl = document.getElementById('timer-display'); const answerRevealAreaEl = document.getElementById('answer-reveal-area'); const partnerWhoseAnswerIsRevealedEl = document.getElementById('partner-whose-answer-is-revealed'); const partnerAnswerRevealEl = document.getElementById('partner-answer-reveal'); const correctAnswerButton = document.getElementById('correct-answer-button'); const incorrectAnswerButton = document.getElementById('incorrect-answer-button');
-        const finalScoresEl = document.getElementById('final-scores'); const winnerAnnouncementEl = document.getElementById('winner-announcement'); 
-        const playAgainButton = document.getElementById('play-again-button');
-        const playAgainSameSettingsButton = document.getElementById('play-again-same-settings-button'); // NUEVO
+        const finalScoresEl = document.getElementById('final-scores'); const winnerAnnouncementEl = document.getElementById('winner-announcement'); const playAgainButton = document.getElementById('play-again-button');
         
         const restartGameButtonGlobal = document.getElementById('restart-game-button-global');
         const homeButtonGlobal = document.getElementById('home-button-global');
@@ -307,18 +302,10 @@
                 }
             });
             currentScreen = screenId;
-            const showGlobalButtons = screenId !== 'endGame'; // Mantener botones si no es endGame
+            const showGlobalButtons = screenId !== 'endGame';
             homeButtonGlobal.classList.toggle('hidden', !showGlobalButtons);
             instructionsButtonGlobal.classList.toggle('hidden', !showGlobalButtons);
             restartGameButtonGlobal.classList.toggle('hidden', !showGlobalButtons);
-            
-            // Específicamente para endGame, ocultar los botones globales si no se quiere que aparezcan ahí.
-            // Si se quiere que SÍ aparezcan en endGame, eliminar este if o ajustar la condición.
-            if (screenId === 'endGame') {
-                homeButtonGlobal.classList.add('hidden');
-                instructionsButtonGlobal.classList.add('hidden');
-                restartGameButtonGlobal.classList.add('hidden');
-            }
         }
         
         function showModal(title, message, type = 'info', buttonText = "Entendido", callback = null, imageUrl = null, showScores = false) {
@@ -344,84 +331,14 @@
 
         modalActionButton.addEventListener('click', () => { messageModal.classList.add('hidden'); if (modalActionCallback) { modalActionCallback(); modalActionCallback = null; } });
         function shuffleArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[array[i], array[j]] = [array[j], array[i]]; } return array; }
-        
-        function resetGame() {
-            currentQuestionnaireQuestionIndex = 0;
-            gameConfig = { numCouples: 0, numQuestionsPerPlayer: 0, timeLimitSeconds: 0 };
-            couplesData = [];
-            playerQuestionnaires = {};
-            currentPlayerAnsweringQuizId = null;
-            gameCurrentCoupleIndex = 0;
-            gameCurrentPlayerIndexInCouple = 0;
-            gameQuestionRound = 0;
-            if (gameTimerInterval) clearInterval(gameTimerInterval);
-
-            numCouplesInput.value = 1;
-            numQuestionsInput.value = 3;
-            timeLimitInput.value = 15; // Mantenerlo igual al valor por defecto del input HTML
-
-            teamNamesInputsContainer.innerHTML = '';
-            playerChoiceButtonsContainer.innerHTML = '';
-            singleQuestionContainer.innerHTML = '';
-            finalScoresEl.innerHTML = '';
-            winnerAnnouncementEl.innerHTML = '';
-
-            startGameFromChoiceButton.classList.add('hidden');
-            allQuestionnairesCompletedMessageChoice.classList.add('hidden');
-            answerRevealAreaEl.classList.add('hidden');
-            correctAnswerButton.classList.add('hidden');
-            incorrectAnswerButton.classList.add('hidden');
-            timerDisplayEl.textContent = "00:00";
-            timerDisplayEl.className = 'timer-display timer-blue';
-            potentialPointsDisplayEl.classList.add('hidden');
-            showScreen('setup');
-        }
-
-        function playAgainWithSameSettings() {
-            if (!gameConfig.numCouples || couplesData.length === 0) {
-                resetGame();
-                return;
-            }
-
-            couplesData.forEach(couple => {
-                couple.score = 0;
-                couple.player1Score = 0;
-                couple.player2Score = 0;
-                couple.player1Answers = {};
-                couple.player2Answers = {};
-                couple.player1QuestionnaireCompleted = false;
-                couple.player2QuestionnaireCompleted = false;
-            });
-
-            currentPlayerAnsweringQuizId = null;
-            gameCurrentCoupleIndex = 0;
-            gameCurrentPlayerIndexInCouple = 0;
-            gameQuestionRound = 0;
-            currentQuestionnaireQuestionIndex = 0;
-            if (gameTimerInterval) clearInterval(gameTimerInterval);
-
-            answerRevealAreaEl.classList.add('hidden');
-            correctAnswerButton.classList.add('hidden');
-            incorrectAnswerButton.classList.add('hidden');
-            timerDisplayEl.textContent = "00:00";
-            timerDisplayEl.className = 'timer-display timer-blue';
-            potentialPointsDisplayEl.classList.add('hidden');
-            
-            allQuestionnairesCompletedMessageChoice.classList.add('hidden');
-            startGameFromChoiceButton.classList.add('hidden');
-
-            preparePlayerQuestionnaires(); // Esto reiniciará swapsUsed y completed dentro de playerQuestionnaires
-            generatePlayerChoiceButtons();
-            showScreen('playerChoice');
-        }
-
+        function resetGame() { currentQuestionnaireQuestionIndex = 0; gameConfig = { numCouples: 0, numQuestionsPerPlayer: 0, timeLimitSeconds: 0 }; couplesData = []; playerQuestionnaires = {}; currentPlayerAnsweringQuizId = null; gameCurrentCoupleIndex = 0; gameCurrentPlayerIndexInCouple = 0; gameQuestionRound = 0; if (gameTimerInterval) clearInterval(gameTimerInterval); numCouplesInput.value = 1; numQuestionsInput.value = 3; timeLimitInput.value = 30; teamNamesInputsContainer.innerHTML = ''; playerChoiceButtonsContainer.innerHTML = ''; singleQuestionContainer.innerHTML = ''; finalScoresEl.innerHTML = ''; winnerAnnouncementEl.innerHTML = ''; startGameFromChoiceButton.classList.add('hidden'); allQuestionnairesCompletedMessageChoice.classList.add('hidden'); answerRevealAreaEl.classList.add('hidden'); correctAnswerButton.classList.add('hidden'); incorrectAnswerButton.classList.add('hidden'); timerDisplayEl.textContent = "00:00"; timerDisplayEl.className = 'timer-display timer-blue'; potentialPointsDisplayEl.classList.add('hidden'); showScreen('setup'); }
 
         startSetupButton.addEventListener('click', () => { const numC = parseInt(numCouplesInput.value); const numQ = parseInt(numQuestionsInput.value); const timeL = parseInt(timeLimitInput.value); if (isNaN(numC) || numC < 1 || numC > 10) { showModal("Error de Configuración", "El número de parejas debe estar entre 1 y 10."); return; } if (isNaN(numQ) || numQ < 1) { showModal("Error de Configuración", "El número de preguntas por cuestionario debe ser al menos 1."); return; } const totalQuestionsNeededForQuestionnaires = numQ * numC * 2; if (allQuestions.length < numQ && numQ > 0) { showModal("Error de Preguntas", `No hay suficientes preguntas (${allQuestions.length}) para ${numQ} por cuestionario.`); return; } if (allQuestions.length < totalQuestionsNeededForQuestionnaires && numQ > 0) { showModal("Advertencia de Preguntas", `Hay ${allQuestions.length} preguntas, pero se necesitan ${totalQuestionsNeededForQuestionnaires} para cuestionarios únicos.`, "info"); } if (isNaN(timeL) || timeL < 10) { showModal("Error de Configuración", "El tiempo para responder debe ser de al menos 10 segundos."); return; } gameConfig.numCouples = numC; gameConfig.numQuestionsPerPlayer = numQ; gameConfig.timeLimitSeconds = timeL; generateTeamNameInputs(); showScreen('teamNames'); });
         
         function generateTeamNameInputs() { teamNamesInputsContainer.innerHTML = ''; couplesData = []; for (let i = 0; i < gameConfig.numCouples; i++) { const coupleDiv = document.createElement('div'); coupleDiv.classList.add('p-3', 'border', 'border-gray-200', 'rounded-lg', 'bg-slate-50'); coupleDiv.innerHTML = ` <h3 class="text-md font-semibold text-gray-700 mb-2">Pareja ${i + 1}</h3> <div><label for="couple-${i}-custom-name" class="label-text text-sm">Nombre para la Pareja:</label><input type="text" id="couple-${i}-custom-name" class="input-field couple-custom-name-input text-sm" placeholder="Nombre del Equipo"></div> <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2"> <div><label for="couple-${i}-player-1" class="label-text text-sm">Nombre Jugador 1:</label><input type="text" id="couple-${i}-player-1" class="input-field player-name-input text-sm" placeholder="Ej: Ana" required></div> <div><label for="couple-${i}-player-2" class="label-text text-sm">Nombre Jugador 2:</label><input type="text" id="couple-${i}-player-2" class="input-field player-name-input text-sm" placeholder="Ej: Juan" required></div> </div>`; teamNamesInputsContainer.appendChild(coupleDiv); couplesData.push({ id: `pareja${i+1}`, customName: "", player1Name: "", player2Name: "", player1Id: `jugador${i*2 + 1}_pareja${i+1}`, player2Id: `jugador${i*2 + 2}_pareja${i+1}`, player1Answers: {}, player2Answers: {}, player1QuestionnaireCompleted: false, player2QuestionnaireCompleted: false, player1Score: 0, player2Score: 0, score: 0 }); } }
         toPlayerChoiceButton.addEventListener('click', () => { let allNamesFilled = true; for (let i = 0; i < gameConfig.numCouples; i++) { const customNameInput = document.getElementById(`couple-${i}-custom-name`); const p1NameInput = document.getElementById(`couple-${i}-player-1`); const p2NameInput = document.getElementById(`couple-${i}-player-2`); const customName = customNameInput.value.trim(); const p1Name = p1NameInput.value.trim(); const p2Name = p2NameInput.value.trim(); if (!p1Name || !p2Name) { allNamesFilled = false; if (!p1Name) p1NameInput.classList.add('border-red-500'); else p1NameInput.classList.remove('border-red-500'); if (!p2Name) p2NameInput.classList.add('border-red-500'); else p2NameInput.classList.remove('border-red-500'); } else { p1NameInput.classList.remove('border-red-500'); p2NameInput.classList.remove('border-red-500'); } couplesData[i].customName = customName || `Pareja ${i + 1}`; couplesData[i].player1Name = p1Name || `Jugador 1 (P${i+1})`; couplesData[i].player2Name = p2Name || `Jugador 2 (P${i+1})`; } if (!allNamesFilled) { showModal("Nombres Incompletos", "Ingresa los nombres de todos los jugadores."); return; } preparePlayerQuestionnaires(); generatePlayerChoiceButtons(); showScreen('playerChoice'); });
         
-        function generatePlayerChoiceButtons() { playerChoiceButtonsContainer.innerHTML = ''; let allCompleted = true; couplesData.forEach(couple => { [couple.player1Id, couple.player2Id].forEach(playerId => { const playerData = playerQuestionnaires[playerId]; const button = document.createElement('button'); button.textContent = `Cuestionario de ${playerData.playerName}`; button.classList.add('btn', 'w-full', 'text-sm', 'py-2'); button.dataset.playerId = playerId; if (playerData.completed) { button.classList.add('btn-secondary'); button.disabled = true; button.innerHTML = `${playerData.playerName} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline-block ml-1"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>`; } else { button.classList.add('btn-primary'); allCompleted = false; } button.addEventListener('click', () => { currentPlayerAnsweringQuizId = playerId; currentQuestionnaireQuestionIndex = 0; displayCurrentSingleQuestion(); showScreen('questionnaire'); }); playerChoiceButtonsContainer.appendChild(button); }); }); allQuestionnairesCompletedMessageChoice.classList.toggle('hidden', !allCompleted); startGameFromChoiceButton.classList.toggle('hidden', !allCompleted); }
+        function generatePlayerChoiceButtons() { playerChoiceButtonsContainer.innerHTML = ''; let allCompleted = true; couplesData.forEach(couple => { [couple.player1Id, couple.player2Id].forEach(playerId => { const playerData = playerQuestionnaires[playerId]; const button = document.createElement('button'); button.textContent = `Cuestionario de ${playerData.playerName}`; button.classList.add('btn', 'w-full', 'text-sm', 'py-2'); button.dataset.playerId = playerId; if (playerData.completed) { button.classList.add('btn-secondary'); button.disabled = true; button.textContent = `${playerData.playerName} (Completado ?)`; } else { button.classList.add('btn-primary'); allCompleted = false; } button.addEventListener('click', () => { currentPlayerAnsweringQuizId = playerId; currentQuestionnaireQuestionIndex = 0; displayCurrentSingleQuestion(); showScreen('questionnaire'); }); playerChoiceButtonsContainer.appendChild(button); }); }); allQuestionnairesCompletedMessageChoice.classList.toggle('hidden', !allCompleted); startGameFromChoiceButton.classList.toggle('hidden', !allCompleted); }
         startGameFromChoiceButton.addEventListener('click', () => { gameCurrentCoupleIndex = 0; gameCurrentPlayerIndexInCouple = 0; gameQuestionRound = 0; setupNextGameTurn(); showScreen('game'); });
 
         function preparePlayerQuestionnaires() { playerQuestionnaires = {}; let questionsPool = [...allQuestions]; couplesData.forEach(couple => { [couple.player1Id, couple.player2Id].forEach(playerId => { shuffleArray(questionsPool); let playerQ = []; if (gameConfig.numQuestionsPerPlayer > 0) { playerQ = questionsPool.slice(0, gameConfig.numQuestionsPerPlayer); if (playerQ.length < gameConfig.numQuestionsPerPlayer) { playerQ = shuffleArray([...allQuestions]).slice(0, gameConfig.numQuestionsPerPlayer); } } playerQuestionnaires[playerId] = { playerName: playerId === couple.player1Id ? couple.player1Name : couple.player2Name, coupleId: couple.id, questions: playerQ, answers: {}, completed: false, swapsUsed: 0 }; }); }); }
@@ -452,7 +369,7 @@
         nextQuestionButtonQuest.addEventListener('click', () => { const playerId = currentPlayerAnsweringQuizId; const playerData = playerQuestionnaires[playerId]; if (!playerData.questions || playerData.questions.length === 0) { playerData.completed = true; generatePlayerChoiceButtons(); showScreen('playerChoice'); currentPlayerAnsweringQuizId = null; return; } const answerInput = document.getElementById('current-questionnaire-answer'); if (!answerInput || answerInput.value.trim() === '') { showModal("Respuesta Faltante", "Por favor, responde la pregunta actual.", "info"); if(answerInput) answerInput.classList.add('border-red-500'); return; } if(answerInput) answerInput.classList.remove('border-red-500'); saveCurrentQuestionnaireAnswer(); if (currentQuestionnaireQuestionIndex < playerData.questions.length - 1) { currentQuestionnaireQuestionIndex++; displayCurrentSingleQuestion(); } else { playerData.completed = true; const couple = couplesData.find(c => c.id === playerData.coupleId); if (couple) { if (playerId === couple.player1Id) { couple.player1Answers = { ...playerData.answers }; couple.player1QuestionnaireCompleted = true; } else if (playerId === couple.player2Id) { couple.player2Answers = { ...playerData.answers }; couple.player2QuestionnaireCompleted = true; } } generatePlayerChoiceButtons(); showScreen('playerChoice'); currentPlayerAnsweringQuizId = null; } });
 
         function setupNextGameTurn() { answerRevealAreaEl.classList.add('hidden'); correctAnswerButton.classList.add('hidden'); incorrectAnswerButton.classList.add('hidden'); potentialPointsDisplayEl.classList.add('hidden'); const totalGameQuestionsToAsk = gameConfig.numQuestionsPerPlayer * 2 * gameConfig.numCouples; if (gameQuestionRound >= totalGameQuestionsToAsk) { endGame(); return; } const currentCouple = couplesData[gameCurrentCoupleIndex]; let playerAnswering, partnerToGuessName, partnerAnswers, partnerPlayerId; if (gameCurrentPlayerIndexInCouple === 0) { playerAnswering = currentCouple.player1Name; partnerToGuessName = currentCouple.player2Name; partnerAnswers = currentCouple.player2Answers; partnerPlayerId = currentCouple.player2Id; } else { playerAnswering = currentCouple.player2Name; partnerToGuessName = currentCouple.player1Name; partnerAnswers = currentCouple.player1Answers; partnerPlayerId = currentCouple.player1Id; } currentCouplePlayingEl.textContent = `${currentCouple.customName}`; currentPlayerAnsweringGameLargeEl.textContent = playerAnswering; partnerToGuessEl.textContent = partnerToGuessName; const partnerQuestionnaire = playerQuestionnaires[partnerPlayerId]; if (!partnerQuestionnaire || !partnerQuestionnaire.questions || partnerQuestionnaire.questions.length === 0) { showModal("Error de Juego", `No se encontraron preguntas para ${partnerToGuessName}.`); endGame(); return; } const questionIndexInPartnersList = Math.floor(gameQuestionRound / (2 * gameConfig.numCouples)) % gameConfig.numQuestionsPerPlayer; if (questionIndexInPartnersList >= partnerQuestionnaire.questions.length) { showModal("Error de Juego", `Índice de pregunta fuera de rango para ${partnerToGuessName}.`); endGame(); return; } currentQuestionForGame = partnerQuestionnaire.questions[questionIndexInPartnersList]; if (!currentQuestionForGame || !currentQuestionForGame.id || !partnerAnswers.hasOwnProperty(currentQuestionForGame.id)) { showModal("Error de Juego", `Pregunta para ${partnerToGuessName} no válida o sin respuesta.`); gameQuestionRound++; setupNextGameTurn(); return; } gameQuestionTextEl.textContent = currentQuestionForGame.texto; partnerWhoseAnswerIsRevealedEl.textContent = partnerToGuessName; partnerAnswerRevealEl.textContent = ""; potentialPointsDisplayEl.textContent = `Vale: ${currentQuestionForGame.dificultad} pts`; potentialPointsDisplayEl.classList.remove('hidden'); startTimer(); }
-        function startTimer() { gameTimeRemaining = gameConfig.timeLimitSeconds; timerDisplayEl.textContent = formatTime(gameTimeRemaining); timerDisplayEl.className = 'timer-display timer-blue'; if (gameTimerInterval) clearInterval(gameTimerInterval); gameTimerInterval = setInterval(() => { gameTimeRemaining--; timerDisplayEl.textContent = formatTime(gameTimeRemaining); if (gameTimeRemaining <= 0) { clearInterval(gameTimerInterval); if (timesupSound) timesupSound.play().catch(e => console.warn("Error sound:", e)); revealAnswerAndActions(); } else if (gameTimeRemaining <= 10 && gameTimeRemaining > 5) { if (countdownSound && gameTimeRemaining === 10) countdownSound.play().catch(e => console.warn("Error sound:", e)); timerDisplayEl.className = 'timer-display timer-yellow'; } else if (gameTimeRemaining <= 5 && gameTimeRemaining > 0) { timerDisplayEl.className = 'timer-display timer-red'; } }, 1000); }
+        function startTimer() { gameTimeRemaining = gameConfig.timeLimitSeconds; timerDisplayEl.textContent = formatTime(gameTimeRemaining); timerDisplayEl.className = 'timer-display timer-blue'; if (gameTimerInterval) clearInterval(gameTimerInterval); gameTimerInterval = setInterval(() => { gameTimeRemaining--; timerDisplayEl.textContent = formatTime(gameTimeRemaining); if (gameTimeRemaining <= 0) { clearInterval(gameTimerInterval); if (timesupSound) timesupSound.play().catch(e => console.warn("Error sound:", e)); revealAnswerAndActions(); } else if (gameTimeRemaining === 10) { if (countdownSound) countdownSound.play().catch(e => console.warn("Error sound:", e)); timerDisplayEl.className = 'timer-display timer-yellow'; } else if (gameTimeRemaining <= 5 && gameTimeRemaining > 0) { timerDisplayEl.className = 'timer-display timer-red'; } }, 1000); }
         function formatTime(seconds) { const minutes = Math.floor(seconds / 60); const secs = seconds % 60; return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`; }
         function revealAnswerAndActions() { if (gameTimerInterval) clearInterval(gameTimerInterval); timerDisplayEl.textContent = "¡Tiempo!"; timerDisplayEl.className = 'timer-display timer-red'; const currentCouple = couplesData[gameCurrentCoupleIndex]; let partnerAnswers = (gameCurrentPlayerIndexInCouple === 0) ? currentCouple.player2Answers : currentCouple.player1Answers; partnerAnswerRevealEl.textContent = partnerAnswers[currentQuestionForGame.id] || "No se registró respuesta."; answerRevealAreaEl.classList.remove('hidden'); correctAnswerButton.classList.remove('hidden'); incorrectAnswerButton.classList.remove('hidden'); }
         correctAnswerButton.addEventListener('click', () => handleGameAnswer(true)); incorrectAnswerButton.addEventListener('click', () => handleGameAnswer(false));
@@ -489,9 +406,7 @@
         }
 
         function endGame() { if (gameTimerInterval) clearInterval(gameTimerInterval); finalScoresEl.innerHTML = ''; winnerAnnouncementEl.innerHTML = ''; let highScore = -1; let winners = []; const sortedCouples = [...couplesData].sort((a, b) => b.score - a.score); sortedCouples.forEach(couple => { const scoreP = document.createElement('p'); scoreP.classList.add('text-md', 'mb-1', 'text-center'); scoreP.innerHTML = `<strong class="text-slate-700">${couple.customName}</strong>: <span class="font-bold text-blue-600">${couple.score} pts</span> <br><span class="text-xs text-gray-600">(${couple.player1Name}: ${couple.player1Score}, ${couple.player2Name}: ${couple.player2Score})</span>`; finalScoresEl.appendChild(scoreP); if (couple.score > highScore) { highScore = couple.score; winners = [couple.customName]; } else if (couple.score === highScore && highScore !== -1) { winners.push(couple.customName); } }); if (winners.length === 0 && highScore === -1 && couplesData.length > 0) { winnerAnnouncementEl.textContent = "El juego ha terminado. ¡Nadie sumó puntos!"; } else if (winners.length === 1) { winnerAnnouncementEl.textContent = `¡Felicidades a ${winners[0]} por ganar!`; } else if (winners.length > 1) { winnerAnnouncementEl.textContent = `¡Empate entre ${winners.join(' y ')}! ¡Felicidades!`; } else { winnerAnnouncementEl.textContent = "El juego ha terminado."; } showScreen('endGame'); }
-        
         playAgainButton.addEventListener('click', resetGame);
-        playAgainSameSettingsButton.addEventListener('click', playAgainWithSameSettings); // NUEVO
         
         restartGameButtonGlobal.addEventListener('click', () => {
             if (currentScreen !== 'setup' && currentScreen !== 'endGame') {
@@ -503,12 +418,7 @@
         });
 
         homeButtonGlobal.addEventListener('click', () => {
-             if (currentScreen !== 'setup') { // Solo pedir confirmación si no estamos ya en setup
-                if (!confirm("¿Seguro que quieres volver al inicio? Se perderá el progreso actual del juego.")) {
-                    return;
-                }
-             }
-             resetGame(); // Llama a resetGame para asegurar que todo se limpie antes de ir a setup.
+            window.location.href = "../index.html"; 
         });
 
         instructionsButtonGlobal.addEventListener('click', () => {
@@ -519,14 +429,14 @@
             instructionsModal.classList.add('hidden');
         });
         
-		window.onload = async () => { 
+		window.onload = async () => { // Convertir a función asíncrona
             try {
-                const response = await fetch('./preguntas.csv'); 
+                const response = await fetch('./preguntas.csv'); // Carga el archivo
                 if (!response.ok) {
                     throw new Error(`Error al cargar preguntas.csv: ${response.status} ${response.statusText}`);
                 }
-                const csvText = await response.text(); 
-                allQuestions = parseCSV(csvText); 
+                const csvText = await response.text(); // Obtiene el texto del archivo
+                allQuestions = parseCSV(csvText); // Parsea el texto obtenido
 
                 countdownSound = document.getElementById('countdown-sound');
                 timesupSound = document.getElementById('timesup-sound');
@@ -544,8 +454,7 @@
                 startSetupButton.disabled = true;
                 startSetupButton.classList.replace('btn-primary','btn-secondary');
             }
-            showScreen('setup'); 
-        };
+            showScreen('setup'); };
     </script>
 </body>
 </html>
